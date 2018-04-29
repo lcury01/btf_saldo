@@ -1,0 +1,35 @@
+<html>
+<body>
+<h3>Consulta Movimentação -  Banco de Tempo de Florianopolis</h3>
+
+<table border="1">
+<tr>
+<td> Data </td>
+<td> Motivo </td>
+<td colspan=2 > Transferindo </td>
+<td colspan=2> Recebendo </td>
+</tr>
+
+	{%	for	transf	in	transfs	%}
+		<tr>		
+			<td> {{ transf.data}}</td>
+			<td> {{ transf.descricao}}</td>
+			
+			
+			{% if transf.sinal  == '+' %} 
+				<td colspan =2>&nbsp;</td>
+				<td> {{ transf.valor}}</td>			
+				<td> {{ transf.comquem}}</td> 
+			{% else %}				
+				<td> {{ transf.valor}}</td>			
+				<td> {{ transf.comquem}}</td> 
+				<td colspan =2>&nbsp;</td>
+			{% endif %}
+					
+		</tr>
+		
+	{%	endfor	%}
+</tr>
+</table>
+</body>
+</html>

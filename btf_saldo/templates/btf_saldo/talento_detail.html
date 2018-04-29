@@ -1,0 +1,18 @@
+{% extends 'btf_saldo/base.html' %}
+
+{% block content %}
+
+<h3>Edicao de Talentos</h3>
+
+    <div class="post">
+        
+        <table border= 1>
+        <tr><td>Quem: </td><td>{{ talento.quem }}</td>
+        <tr><td>Area do Talento: </td><td>{{ ltalento.talentoclasse }}</td>
+        <tr><td>Descrição: </td><td>{{ talento.descricao }}</td>
+        <tr><td>Experienca: </td><td>{{ talento.experiencia }}</td>
+        <tr><td>Regiao: </td><td>{{ lancamento.regiao }}</td>
+
+    </div>
+    
+{% endblock %}

@@ -37,7 +37,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'blog'
+    'blog',
+    'btf_saldo',
+    'polls'
 ]
 
 MIDDLEWARE_CLASSES = [
@@ -123,3 +125,4 @@ STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 ALLOWED_HOSTS = ['127.0.0.1', '<your_username>.pythonanywhere.com']
+

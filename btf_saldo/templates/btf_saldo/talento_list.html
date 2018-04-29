@@ -1,0 +1,32 @@
+{% extends 'btf_saldo/base.html' %}
+
+{% block content %}
+
+<h3>Lista de Talentos Banco de Tempo de Florianopolis</h3>
+	<table border = 1>
+	<tr>
+		<td> Classe </td> 
+		<td> Regiao </td> 
+		<td>Talento</td>
+		<td>Quem</td>
+		<td>&nbsp;</td>
+		
+
+
+	</tr>
+
+	{%	for	talento	in	talentos	%}
+		<tr>
+			<td>{{talento.talentoclasse}}</td>
+			<td>{{talento.regiao}}</td>
+			<td>{{talento.descricao}}</td>
+			<td> {{	talento.quem	}} </td>
+			<td>&nbsp;</td>
+			
+		</tr>
+
+		
+	{%	endfor	%}
+	</table>
+
+{% endblock %}
