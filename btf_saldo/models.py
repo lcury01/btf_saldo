@@ -15,7 +15,7 @@ class CadastroAUX(models.Model):
                                     return  self.nome
 
 class Lancamento2(models.Model):                        
-                    debito_fk   =   models.ForeignKey(Cadastro, verbose_name="quem transfere os créditos")
+                    debito_fk   =   models.ForeignKey(Cadastro)
                     credito_fk  =   models.ForeignKey(CadastroAUX, verbose_name="quem recebe os créditos")
                     descricao   =   models.CharField("Qual foi a troca", max_length=100)
                     valor       =   models.DecimalField("Créditos de Tempo", max_digits=4,decimal_places=2)
