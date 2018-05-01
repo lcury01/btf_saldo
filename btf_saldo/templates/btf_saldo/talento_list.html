@@ -2,31 +2,30 @@
 
 {% block content %}
 
-<h3>Lista de Talentos Banco de Tempo de Florianopolis</h3>
-	<table border = 1>
-	<tr>
-		<td> Classe </td> 
-		<td> Regiao </td> 
-		<td>Talento</td>
-		<td>Quem</td>
-		<td>&nbsp;</td>
-		
+<h4>Lista de Talentos</h4>
+	<table class="table">
+		<thead class="thead-light">
+			<tr>
+				<th scope="col"> Classe </th> 
+				<th scope="col"> Regiao </th> 
+				<th scope="col"> Talento</th>
+				<th scope="col"> Quem oferece</th>
+			</tr>
+		</thead>
+		<tbody>
 
+		{%	for	talento	in	talentos	%}
+			<tr>
+				<td>{{talento.talentoclasse}}</td>
+				<td>{{talento.regiao}}</td>
+				<td>{{talento.descricao}}</td>
+				<td> {{	talento.quem	}} </td>
+				
+			</tr>
 
-	</tr>
-
-	{%	for	talento	in	talentos	%}
-		<tr>
-			<td>{{talento.talentoclasse}}</td>
-			<td>{{talento.regiao}}</td>
-			<td>{{talento.descricao}}</td>
-			<td> {{	talento.quem	}} </td>
-			<td>&nbsp;</td>
 			
-		</tr>
-
-		
-	{%	endfor	%}
+		{%	endfor	%}
+		</tbody>
 	</table>
 
 {% endblock %}

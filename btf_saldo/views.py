@@ -16,7 +16,7 @@ from .forms import CadastroForm
 # a partir daqui
 
 def home(request):
-	return 	render(request, 'btf_saldo/home.html')
+	return 	render(request, 'btf_saldo/inicio.html')
 
 def geral(request):    
     cadastros   =   Cadastro.objects.all()
