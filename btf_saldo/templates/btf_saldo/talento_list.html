@@ -17,7 +17,7 @@
 		{% for	talento	in	talentos	%}
 			
 			{%	ifchanged talento.talentoclasse  %}					
-					<tr><td colspan = "3" align="center" bgcolor="Whitesmoke"> Classe: {{ talento.talentoclasse }} </td></tr>					
+					<tr><td colspan = "3" align="center" bgcolor="Whitesmoke"> {{ talento.talentoclasse }} </td></tr>					
 			{%	endifchanged	%}
 			
 			<tr>
