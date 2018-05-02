@@ -18,6 +18,9 @@ from .forms import CadastroForm
 def home(request):
 	return 	render(request, 'btf_saldo/inicio.html')
 
+def dica1(request):
+	return 	render(request, 'btf_saldo/dica1.html')
+
 def geral(request):    
     cadastros   =   Cadastro.objects.all()
     return  render(request, 'btf_saldo/geral.html',  {'cadastros':cadastros})    
@@ -62,7 +65,7 @@ def lancamento_new(request):
 	return	render(request,	'btf_saldo/lancamento_edit.html',	{'form':	form})    
 
 def talento_list(request):    
-    talentos   =   Talento.objects.all()
+    talentos   =   Talento.objects.all().order_by('talentoclasse','regiao')
     return  render(request, 'btf_saldo/talento_list.html',  {'talentos':talentos})    
 
 def talento_crud(request):    
@@ -71,11 +74,25 @@ def talento_crud(request):
 		if form.is_valid():
 			talento = form.save(commit=False)
 			talento.save()
-			return	redirect('btf_saldo.views.talento_detail',	pk=talento.pk)	
+			return	redirect('btf_saldo.views.talento_edit',	pk=talento.pk)	
 	else:		
 		form	=	TalentoForm()
 	return	render(request,	'btf_saldo/talento_crud.html',	{'form':	form})    
 
+
 def talento_detail(request, pk):
     talento = get_object_or_404(Talento, pk=pk)
     return render(request, 'btf_saldo/talento_detail.html', {'talento': talento})
+
+def talento_edit(request, pk):
+    talento = get_object_or_404(Talento, pk=pk)
+    if request.method == "POST":
+        form = TalentoForm(request.POST, instance=talento)
+        if form.is_valid():
+            talento = form.save(commit=False)
+            talento.save()
+            return redirect('talento_detail', pk=talento.pk)
+    else:
+        form = TalentoForm(instance=talento)
+    return render(request, 'btf_saldo/talento_edit.html', {'form': form})    
+

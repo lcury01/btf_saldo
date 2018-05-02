@@ -2,29 +2,36 @@
 
 {% block content %}
 
-<h4>Lista de Talentos</h4>
+
+	<h4>Lista de Talentos</h4>
 	<table class="table">
 		<thead class="thead-light">
 			<tr>
-				<th scope="col"> Classe </th> 
-				<th scope="col"> Regiao </th> 
+				<th scope="col"> Quem oferece </th> 
 				<th scope="col"> Talento</th>
-				<th scope="col"> Quem oferece</th>
+				<th scope="col"> Regiao</th>
 			</tr>
 		</thead>
 		<tbody>
-
-		{%	for	talento	in	talentos	%}
+		
+		{% for	talento	in	talentos	%}
+			
+			{%	ifchanged talento.talentoclasse  %}					
+					<tr><td colspan = "3" align="center" bgcolor="Whitesmoke"> Classe: {{ talento.talentoclasse }} </td></tr>					
+			{%	endifchanged	%}
+			
 			<tr>
-				<td>{{talento.talentoclasse}}</td>
-				<td>{{talento.regiao}}</td>
+				<td> {{	talento.quem	}} </td>	
 				<td>{{talento.descricao}}</td>
-				<td> {{	talento.quem	}} </td>
-				
-			</tr>
+				<td>{{talento.regiao}}</td>
 
+			</tr>
+		{% 	empty	%}	
+
+			<tr><td colspan="3">Ainda não temos talentos cadastrados</td></tr>
 			
 		{%	endfor	%}
+		
 		</tbody>
 	</table>
 

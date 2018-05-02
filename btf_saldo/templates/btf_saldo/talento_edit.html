@@ -1,0 +1,16 @@
+{% extends 'btf_saldo/base.html' %}
+
+{%	block	content	%}
+	
+	<h3>Cadastro de Talentos</h3>
+	<font size=4 color="red">
+	<p> * Confira se seu talento está cadastrado corretamente, ainda não é possivel editar os dados cadastrados. </p>
+	<p> Por enquanto, alterações posteriores só poderão ser feitas através da equipe de Operação do BTF e pode levar tempo.</p></font>
+	<form	method="POST"	class="post-form">{%	csrf_token	%}
+			
+			{{	form.as_p	}}
+				<button	type="submit"	class="save	btn	btn-default">Confirmar</button>
+
+	</form>
+
+{%	endblock	%}

@@ -30,9 +30,13 @@
 
   <script src="{% static 'js/bootstrap.min.js' %}" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
 
+  <script type="text/javascript" src="{% static 'js/jquery-latest.js' %}"</script>
+<script type="text/javascript" src="{% static 'js/jquery.tablesorter.js' %}"</script>
+
+
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="background-color: #e3f2fd;">
   
-    <a class="navbar-brand" href="{% url 'home' %}"> Inicio </a>  
+    <a class="navbar-brand" href="{% url 'home' %}"> Como funciona </a>  
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
     </button>
@@ -65,9 +69,9 @@
         </a>
 
         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" href="{% url 'dica1' %}">Dicas para cadastrar talentos. Leia!</a>
           <a class="dropdown-item" href="{% url 'talento_crud' %}">Novo Talento</a>
-          <a class="dropdown-item" href="{% url 'talento_list' %}">Lista Geral</a>
-          <a class="dropdown-item" href="#">Something else here</a>
+          <a class="dropdown-item" href="{% url 'talento_list' %}">Lista Geral</a>          
         </div>
       </li>
     </ul>
@@ -88,7 +92,7 @@
     <div align="right">
         <small>
         <p>BTF - vr beta
-        <br>Contato: Luciana Cury</p>
+        <br>Responsável técnica: Luciana Cury</p>
         </small>
     </div>    
 </body>

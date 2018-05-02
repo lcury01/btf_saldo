@@ -2,17 +2,27 @@
 
 {% block content %}
 
-<h3>Edicao de Talentos</h3>
+<h3>Cadastro de Talentos</h3>
+
+
+	<p><small>Seu talento está cadastrado no BTF.</small></p>
 
     <div class="post">
-        
-        <table border= 1>
-        <tr><td>Quem: </td><td>{{ talento.quem }}</td>
-        <tr><td>Area do Talento: </td><td>{{ ltalento.talentoclasse }}</td>
-        <tr><td>Descrição: </td><td>{{ talento.descricao }}</td>
-        <tr><td>Experienca: </td><td>{{ talento.experiencia }}</td>
-        <tr><td>Regiao: </td><td>{{ lancamento.regiao }}</td>
+            
+        <p> Seu nome cadastrado no BTF: {{ talento.quem }}</p>
+        <p> Area do Talento: {{ talento.talentoclasse }}</p>
+        <p>Descrição: {{ talento.descricao }}</p>
+        <p>Experienca: {{ talento.experiencia }}</p>
+        <p>Regiao: {{ lancamento.regiao }}</p>
 
     </div>
+
+<table border=0>
+<tr>
+<td width="15%"">&nbsp;</td><td><a href="{% url 'talento_crud' %}">Cadastrar outro talento</a></td>
+<td width="15%"">&nbsp;</td><td><a href="{% url 'talento_list' %}">Lista Geral de Talentos</a></td>
+</tr>
+</table>          
+        
     
 {% endblock %}
