@@ -1,3 +1,5 @@
+from dal import autocomplete
+
 from django import forms
 
 from .models import Lancamento2
@@ -12,11 +14,6 @@ class	LancamentoForm(forms.ModelForm):
 		model	=	Lancamento2
 		fields	=	('debito_fk','credito_fk','descricao','valor')
 		#fields	=	('credito_fk','credito_nm',	'debito_nm', 'valor',)
-
-class	TalentoForm(forms.ModelForm):
-	class	Meta:
-		model	=	Talento
-		fields	=	('quem','talentoclasse','descricao','experiencia','regiao')
 		
 
 class	CadastroForm(forms.ModelForm):
@@ -24,6 +21,11 @@ class	CadastroForm(forms.ModelForm):
 		model	=	Cadastro
 		fields	=	('nome','conta','saldo_inicial')
 
-		
 
-
+class TalentoForm(forms.ModelForm):	
+   class 	Meta:
+    	model 	= 	Talento
+    	fields 	= 	('quem','regiao','experiencia')
+    	widgets = 	{
+				'quem': autocomplete.ModelSelect2(url='quem-autocomplete')
+		}

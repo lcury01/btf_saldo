@@ -2,6 +2,8 @@
 from django.utils import timezone
 from django.shortcuts import render, get_object_or_404, redirect
 
+from dal import autocomplete
+
 
 from .models import Cadastro
 from .models import CadastroAUX
@@ -73,6 +75,7 @@ def talento_crud(request):
 		form = TalentoForm(request.POST)
 		if form.is_valid():
 			talento = form.save(commit=False)
+			talento.quem='Luciana'
 			talento.save()
 			return	redirect('btf_saldo.views.talento_edit',	pk=talento.pk)	
 	else:		
@@ -96,3 +99,15 @@ def talento_edit(request, pk):
         form = TalentoForm(instance=talento)
     return render(request, 'btf_saldo/talento_edit.html', {'form': form})    
 
+class QuemAutocomplete(autocomplete.Select2QuerySetView):
+    def get_queryset(self):
+        # Don't forget to filter out results depending on the visitor !
+        if not self.request.user.is_authenticated():
+            return Cadastro.objects.none()
+
+        qs = Cadastro.objects.all()
+
+        if self.q:
+            qs = qs.filter(name__istartswith=self.q)
+
+        return qs

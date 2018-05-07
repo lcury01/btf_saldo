@@ -1,0 +1,29 @@
+{
+	"folders":
+	[
+		{
+			"path": "btf_saldo"
+		},
+		{
+			"path": "mysite"
+		},
+		{
+			"path": "blog"
+		},
+		{
+			"path": "btf_env"
+		},
+		{
+			"path": "myvenv"
+		},
+		{
+			"path": "polls"
+		},
+		{
+			"path": "python-getting-started"
+		},
+		{
+			"path": "testes"
+		}
+	]
+}

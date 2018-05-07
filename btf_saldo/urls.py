@@ -1,5 +1,8 @@
+
 from django.conf.urls import url
 from . import views
+
+from btf_saldo.views import QuemAutocomplete
 
 urlpatterns = [
     url(r'^$', views.home, name='home'),
@@ -18,7 +21,9 @@ urlpatterns = [
 
     url(r'^lancamento/(?P<pk>\d+)/$', views.lancamento_detail, name='lancamento_detail'),
     url(r'^lancamento/new/$',	views.lancamento_new,	name='lancamento_new'),
-            
+ 
+
+    url(r'^quem-autocomplete/$',    QuemAutocomplete.as_view(), name='quem-autocomplete',),           
 ]
 
 

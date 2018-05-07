@@ -1,5 +1,6 @@
 from django.db import models
 from django.utils import timezone
+from dal import autocomplete
 
 class Cadastro(models.Model):
     				nome 	= 	models.CharField("Nome do Associado", max_length=50)
@@ -44,9 +45,12 @@ class Regiao (models.Model):
 
 class Talento (models.Model):
     talentoclasse = models.ForeignKey(TalentoClasse, verbose_name = "area do talento")
-    quem = models.ForeignKey(Cadastro, verbose_name = "Associado",help_text="Quem é você no BTF? Seu nome igual ao da planilha de créditos")
     descricao = models.TextField("seu Talento", max_length=1000,help_text="Descreva como vc quer oferecer seu talento ao grupo BTF")
     experiencia = models.TextField("experiência", max_length=1000,help_text="Nos conte qual a sua experiência com esse talento. Isso fica apenas nos nossos registros, para ações maiores do BTF, quando precisarmos de talentos bem especificos nos eventos em grupo ou projetos sociais")
     regiao = models.ForeignKey(Regiao, verbose_name = "Região de Atuação",help_text="Regiao onde vc pode ajudar com seu talento")
+    quem = models.ForeignKey(Cadastro)
     def __str__(self):
                     return  self.descricao
+
+
+

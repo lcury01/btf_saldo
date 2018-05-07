@@ -1,14 +1,23 @@
 {% extends 'btf_saldo/base.html' %}
 
+{% load staticfiles %}
+
 {%	block	content	%}
 	
 	<h3>Cadastro de Talentos</h3>
 	<form	method="POST"	class="post-form">{%	csrf_token	%}
 			
 			{{	form.as_p	}}
-			
+
+				
 				<button	type="submit"	class="save	btn	btn-default">Guardar</button>
 
 	</form>
 
-{%	endblock	%}
+{% endblock %}
+
+{% block footer %}
+<script type="text/javascript" src="{% static 'js/jquery-3.3.1.min.js' %}"></script>
+
+{{ form.media }}
+{% endblock %}
