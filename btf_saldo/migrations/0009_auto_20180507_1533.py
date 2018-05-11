@@ -18,7 +18,7 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='talento',
             name='quem',
-            field=models.ForeignKey(to='btf_saldo.Cadastro', default=1),
+            field=models.ForeignKey(to='btf_saldo.Cadastro', default=1, on_delete=models.CASCADE ),
             preserve_default=False,
         ),
     ]

@@ -9,6 +9,7 @@ from .models import Regiao
 from .models import TalentoClasse
 from .models import Talento
 
+
 class	LancamentoForm(forms.ModelForm):
 	class	Meta:
 		model	=	Lancamento2
@@ -22,10 +23,19 @@ class	CadastroForm(forms.ModelForm):
 		fields	=	('nome','conta','saldo_inicial')
 
 
+class ModelChoiceField2(forms.ModelMultipleChoiceField):
+    def label_from_instance(self, obj):
+        return "My Object #%i" % obj.name
+
 class TalentoForm(forms.ModelForm):	
    class 	Meta:
     	model 	= 	Talento
-    	fields 	= 	('quem','regiao','experiencia')
+    	fields 	= 	('quem', 'regiao', 'talentoclasse', 'descricao', 'experiencia')
     	widgets = 	{
-				'quem': autocomplete.ModelSelect2(url='quem-autocomplete')
+				'quem': autocomplete.ModelSelect2(url='nome-autocomplete')
 		}
+
+
+
+
+		

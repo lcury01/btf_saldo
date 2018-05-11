@@ -3,8 +3,17 @@
 {% load staticfiles %}
 
 {%	block	content	%}
+
+{% load static %}
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.js" type="text/javascript"></script>
+
+{{ form.media.css }}
 	
 	<h3>Cadastro de Talentos</h3>
+	<p>&nbsp;</p>
+	<p> Antes de cadastrar seus talentos, leia as Dicas para cadastrar talentos e reveja as Leis que regem o BTF em "Como funciona"</p>
+	<p>&nbsp;</p>
 	<form	method="POST"	class="post-form">{%	csrf_token	%}
 			
 			{{	form.as_p	}}
@@ -13,11 +22,5 @@
 				<button	type="submit"	class="save	btn	btn-default">Guardar</button>
 
 	</form>
-
-{% endblock %}
-
-{% block footer %}
-<script type="text/javascript" src="{% static 'js/jquery-3.3.1.min.js' %}"></script>
-
-{{ form.media }}
+{{ form.media.js }}
 {% endblock %}

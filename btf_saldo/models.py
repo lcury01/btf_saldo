@@ -16,8 +16,8 @@ class CadastroAUX(models.Model):
                                     return  self.nome
 
 class Lancamento2(models.Model):                        
-                    debito_fk   =   models.ForeignKey(Cadastro, verbose_name = "qum transfere os creditos")
-                    credito_fk  =   models.ForeignKey(CadastroAUX, verbose_name="quem recebe os créditos")
+                    debito_fk   =   models.ForeignKey(Cadastro, on_delete=models.CASCADE, verbose_name = "qum transfere os creditos")
+                    credito_fk  =   models.ForeignKey(CadastroAUX, verbose_name="quem recebe os créditos", on_delete=models.CASCADE)
                     descricao   =   models.CharField("Qual foi a troca", max_length=100)
                     valor       =   models.DecimalField("Créditos de Tempo", max_digits=4,decimal_places=2)
                     dttroca     =   models.DateField("quando foi a troca",default=timezone.now)
@@ -26,7 +26,7 @@ class Lancamento2(models.Model):
                                     return  self.descricao
 
 class Transferencia (models.Model):
-    quem=models.ForeignKey(Cadastro)
+    quem=models.ForeignKey(Cadastro, on_delete=models.CASCADE)
     descricao = models.CharField("Qual foi a troca", max_length=100)
     comquem = models.CharField("Com que trocou", max_length=50, default='')
     valor = models.DecimalField("Créditos de Tempo", max_digits=4,decimal_places=2)
@@ -44,11 +44,11 @@ class Regiao (models.Model):
                     return  self.descricao
 
 class Talento (models.Model):
-    talentoclasse = models.ForeignKey(TalentoClasse, verbose_name = "area do talento")
+    talentoclasse = models.ForeignKey(TalentoClasse, verbose_name = "area do talento", on_delete=models.CASCADE)
     descricao = models.TextField("seu Talento", max_length=1000,help_text="Descreva como vc quer oferecer seu talento ao grupo BTF")
     experiencia = models.TextField("experiência", max_length=1000,help_text="Nos conte qual a sua experiência com esse talento. Isso fica apenas nos nossos registros, para ações maiores do BTF, quando precisarmos de talentos bem especificos nos eventos em grupo ou projetos sociais")
-    regiao = models.ForeignKey(Regiao, verbose_name = "Região de Atuação",help_text="Regiao onde vc pode ajudar com seu talento")
-    quem = models.ForeignKey(Cadastro)
+    regiao = models.ForeignKey(Regiao, verbose_name = "Região de Atuação", help_text="Regiao onde vc pode ajudar com seu talento", on_delete=models.CASCADE)
+    quem = models.ForeignKey(Cadastro, verbose_name="quem é você", help_text="Digite seu nome igual a planilha de Créditos", on_delete=models.CASCADE )
     def __str__(self):
                     return  self.descricao
 

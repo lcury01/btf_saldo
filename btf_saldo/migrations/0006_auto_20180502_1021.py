@@ -14,12 +14,12 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='lancamento2',
             name='credito_fk',
-            field=models.ForeignKey(to='btf_saldo.CadastroAUX', verbose_name='quem recebe os créditos'),
+            field=models.ForeignKey(on_delete=models.CASCADE, to='btf_saldo.CadastroAUX', verbose_name='quem recebe os créditos'),
         ),
         migrations.AlterField(
             model_name='lancamento2',
             name='debito_fk',
-            field=models.ForeignKey(to='btf_saldo.Cadastro', verbose_name='qum transfere os creditos'),
+            field=models.ForeignKey(on_delete=models.CASCADE,to='btf_saldo.Cadastro', verbose_name='qum transfere os creditos'),
         ),
         migrations.AlterField(
             model_name='talento',

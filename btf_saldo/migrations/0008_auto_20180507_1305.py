@@ -33,6 +33,6 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='talento',
             name='regiao',
-            field=models.ForeignKey(to='btf_saldo.Regiao', verbose_name='Região de Atuação', help_text='Regiao onde vc pode ajudar com seu talento'),
+            field=models.ForeignKey(on_delete=models.CASCADE, to='btf_saldo.Regiao', verbose_name='Região de Atuação', help_text='Regiao onde vc pode ajudar com seu talento'),
         ),
     ]

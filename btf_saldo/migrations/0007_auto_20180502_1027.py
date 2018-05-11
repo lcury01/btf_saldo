@@ -24,11 +24,11 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='talento',
             name='quem',
-            field=models.ForeignKey(help_text='Quem é você no BTF? Seu nome igual ao da planilha de créditos', to='btf_saldo.Cadastro', verbose_name='Associado'),
+            field=models.ForeignKey(on_delete=models.CASCADE,help_text='Quem é você no BTF? Seu nome igual ao da planilha de créditos', to='btf_saldo.Cadastro', verbose_name='Associado'),
         ),
         migrations.AlterField(
             model_name='talento',
             name='regiao',
-            field=models.ForeignKey(help_text='regiao onde vc pode ajudar com seu talento', to='btf_saldo.Regiao', verbose_name='Região de Atuação'),
+            field=models.ForeignKey(on_delete=models.CASCADE,help_text='regiao onde vc pode ajudar com seu talento', to='btf_saldo.Regiao', verbose_name='Região de Atuação'),
         ),
     ]
