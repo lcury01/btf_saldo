@@ -18,6 +18,18 @@ from .forms import CadastroForm
 def home(request):
 	return 	render(request, 'btf_saldo/inicio.html')
 
+def funcionamento(request):
+    return  render(request, 'btf_saldo/funcionamento.html')
+
+def fundamentos(request):
+    return  render(request, 'btf_saldo/fundamentos.html')
+
+def saiba_mais(request):
+    return  render(request, 'btf_saldo/saiba_mais.html')
+
+def seguranca(request):
+    return  render(request, 'btf_saldo/seguranca.html')
+
 def dica1(request):
 	return 	render(request, 'btf_saldo/dica1.html')
 

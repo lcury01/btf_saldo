@@ -1,16 +1,40 @@
+<!-- base.html -->
 {% extends 'btf_saldo/base.html' %}
 
+<!-- staticfiles -->
+{% load staticfiles %}
+
+<!-- block content -->
 {%	block	content	%}
+
+<!-- aqui static -->
+{% load static %}
+<!-- aqui bootstrap4 -->
+{% load bootstrap4 %}
+
+<!-- script autocomplete -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.js" type="text/javascript"></script>
+
+<!-- aqui form media -->
+	{{ form.media.css }}
 	
-	<h3>Cadastro de Talentos</h3>
-	<font size=4 color="red">
-	<p> * Confira se seu talento está cadastrado corretamente, ainda não é possivel editar os dados cadastrados. </p>
-	<p> Por enquanto, alterações posteriores só poderão ser feitas através da equipe de Operação do BTF e pode levar tempo.</p></font>
+	<div class="container text-left">
+    	<h3 class="display-0 m-0">Cadastro de Talentos - Confirmação</h1>
+    	<p class="small text-info">
+      	Confira se seu talento está cadastrado corretamente e clique em comfirmar no final da tela.</p>
+		<p class ="small text-info">Depois da confirmação, se você precisar alterar seu talento, envie um e-mail para cadastro@btfloripa.com.br</p>
+    	
+  	
+
 	<form	method="POST"	class="post-form">{%	csrf_token	%}
-			
-			{{	form.as_p	}}
-				<button	type="submit"	class="save	btn	btn-default">Confirmar</button>
+		{% bootstrap_form form %}			
+
+		{% buttons submit='Confimar' %}{% endbuttons %}		
 
 	</form>
+	</div>
+	<!-- form media -->
+{{ form.media.js }}
+{% endblock %}
 
-{%	endblock	%}
+	

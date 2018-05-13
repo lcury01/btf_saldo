@@ -1,26 +1,37 @@
+<!-- base.html -->
 {% extends 'btf_saldo/base.html' %}
 
+<!-- staticfiles -->
 {% load staticfiles %}
 
+<!-- block content -->
 {%	block	content	%}
 
+<!-- aqui static -->
 {% load static %}
+<!-- aqui bootstrap4 -->
+{% load bootstrap4 %}
 
+<!-- script autocomplete -->
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.js" type="text/javascript"></script>
 
-{{ form.media.css }}
+<!-- aqui form media -->
+	{{ form.media.css }}
 	
-	<h3>Cadastro de Talentos</h3>
-	<p>&nbsp;</p>
-	<p> Antes de cadastrar seus talentos, leia as Dicas para cadastrar talentos e reveja as Leis que regem o BTF em "Como funciona"</p>
-	<p>&nbsp;</p>
-	<form	method="POST"	class="post-form">{%	csrf_token	%}
-			
-			{{	form.as_p	}}
+	<div class="container text-left">
+    	<h3 class="display-0 m-0">Cadastro de Talentos</h1>
+    	<p class="small">
+      		Antes de cadastrar seus talentos, leia as Dicas para cadastrar talentos e reveja as Leis que regem o BTF em "Como funciona"
+    	</p>
+  	</div>
 
-				
-				<button	type="submit"	class="save	btn	btn-default">Guardar</button>
+	<form	method="POST"	class="post-form">{%	csrf_token	%}
+		{% bootstrap_form form %}			
+
+		{% buttons submit='Gravar' reset="Cancelar" %}{% endbuttons %}		
 
 	</form>
+
+	<!-- form media -->
 {{ form.media.js }}
 {% endblock %}

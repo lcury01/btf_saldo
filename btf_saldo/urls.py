@@ -8,6 +8,11 @@ urlpatterns = [
     url(r'^$', views.home, name='home'),
     url(r'^dica1$', views.dica1, name='dica1'),
     url(r'^geral/$', views.geral, name='geral'), 
+    url(r'^funcionamento/$', views.funcionamento, name='funcionamento'), 
+    url(r'^fundamentos/$', views.fundamentos, name='fundamentos'), 
+    url(r'^saiba_mais/$', views.saiba_mais, name='saiba_mais'), 
+    url(r'^seguranca/$', views.seguranca, name='seguranca'), 
+
     url(r'^lista/$', views.cadastro_list, name='cadastro_list'),    
     url(r'^movimentacao/(?P<pk>\d+)/$', views.movimentacao, name='movimentacao'),
 

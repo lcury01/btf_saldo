@@ -1,198 +1,32 @@
 {% extends 'btf_saldo/base.html' %}
 
+{# Load the tag library #}
+{% load bootstrap4 %}
+
+{# Load CSS and JavaScript #}
+{% bootstrap_css %}
+{% bootstrap_javascript jquery='full' %}
+
 {% block content %}
 
+<p class="text-dark">Seja Bem-vindo ao aplicativo do BTF!</p>
+<BR>
+<span class="text-dark">
+Se você estiver usando um celular, no canto direito da tela tem uma listinha que é o Menu do aplicativo.<BR>
+Para cadastrar seu talento, clica na listinha, seleciona Talento e depois Recadastro.<BR>
+A lista de Talentos tá valendo! Olha lá quanto talento legal já está aparecendo aqui!
+<BR><BR>
+Esse site ainda está em construção e o seu palpite é muito importante para que ele fique bom.<br>
+Se encontrar alguma dificuldade, por favor, entre em contato com os administradores do grupo.
+<BR><BR>
+Se você ainda não é associado ao Banco de Tempo, siga as instruções no post fixo do grupo do facebook. <br>
+O cadastro ainda é feito lá.
 
-<h3> MISSÃO:</h3>
-<p class="ml-0"> “Promover o intercâmbio entre talentos e necessidades da comunidade de forma responsiva com base nos valores universais de qualidade de vida”</p>
-<h3> OBJETIVOS:</h3>
-<p> - Promover melhorias na qualidade de vida da comunidade através de projetos e oficinas gratuitas.</p>
-<p>- Criar estruturas envolventes para articulação de sonhos e talentos</p>
-<p>- Promover um canal de comunicação aberto , reflexivo e responsivo</p>
-<!--
-<h3>ESTRATÉGIAS:</h3>
-<p> Focar nas trocas pessoais<p>
-<p> Aumentar o número de projetos sociais</p>
-<p> Criar núcleos e equipe de apoio ao BTF (amadrinhos)</p>
-<p> Informações do BTF melhor veiculadas através de vídeos, imagens e comunicados (em conjunto com o núcleo de comunicação)</p> -->
-
-<h3>1. LEIS FUNDAMENTAIS</h3>
-<p> 1.1 - O Banco se reserva exclusivamente ao dever de cadastrar e dar assessoria a  novos associados, atualizar créditos e promover ações sociais e do grupo;</p>
-
-<p> 1.2 - Em hipótese alguma, os serviços do Banco envolvem dinheiro pelo tempo doado;</p>
-
-<p> 1.3 - A moeda de troca é o tempo de serviço prestado, sendo proibida a valoração de um tempo que não seja o do encontro para a prestação do serviço. Salvo exceções previstas no item 3.8.</p>
-
-<p> 1.4 - NENHUM sócio é OBRIGADO ou PROIBIDO de solicitar e receber qualquer tipo de serviço ofertado ou participar de qualquer projeto promovido pelo Banco;</p>
-
-<p> 1.5 - O Banco funciona por meio de serviços prestados em forma de DOAÇÕES DE TEMPO, não configurando assim a prestação de serviços profissionais, que na moeda TEMPO poderão se utilizar dos talentos de uma outra pessoa.</p>
-
-<h3>2. COMO INGRESSAR</h3>
-</h5> 2.1 Quem pode ingressar no Banco de Tempo de Florianópolis:</h5>
-
-<p> 2.1.1 - É vedado o cadastro de empresas no BTF, sendo deste modo, obrigatório o cadastro apenas de talentos de pessoas físicas.</p>
-<p> 2.1.2 - Serão cadastrados na planilha de talentos, apenas perfis pessoais. Páginas não serão aceitas no cadastro.</p>
-
-<h5> 2.2 Como se CADASTRAR</h5>
-<p> 2.2.1 - Para se cadastrar no BTF é necessário preencher o formulário no link que aparece na publicação fixada do grupo.</p>
-<p> 2.2.2 - Ao se cadastrar no BTF, todo membro atesta que está ciente e de acordo com as regras do  grupo.</p>
-<p>2.2.3 - Cadastros com informações básicas incompletas (nome no  Facebook, bairro…), serão automaticamente invalidados.</p>
-<p> 2.2.4 - Atualizações de cadastros também deverão ser feitas via formulário.</p>
-<p> 2.2.5 - Quando um associado alterar seu nome no Facebook, deve atualizar seu cadastro.</p>
-<p> 2.2.6 - Será divulgada semanalmente no grupo pela administração do Banco de Tempo, a lista de novos membros cadastrados.</p>
-<h3>3. DOS SERVIÇOS</h3>
-<h5> 3.1 Das solicitações de serviço:</h5>
-<p> 3.1.1- Para todo serviço solicitado, a quantidade de horas deve ser previamente combinada. No caso de serviços cujo tempo é variável, deve-se fazer um “orçamento de horas” que deve ser acordado antes de efetuar o serviço. </p>
-
-<p> 3.1.2- As negociações, ainda que feitas no modo privado, devem ser publicadas no grupo do Banco de Tempo de Florianópolis para que tenham caráter oficial e respaldo pelas regras do Banco e  para que coadunem com o princípio de transparência. Deve conter as informações: serviço, prestador, quantidade de horas, data, hora, local.</p>
-
-<h5>3.2 Responsabilidade e responsividade</h5>
-<p> 3.2.1 - O Banco de Tempo não se responsabiliza pelos serviços e produtos oferecidos pelos seus associados, sendo este unicamente um espaço que permite o intercâmbio de talentos e produtos artesanais.</p>
-<p> 3.2.2 - É de responsabilidade de quem está oferecendo os serviços ou produtos atestar sua qualidade;</p>
-<p> 3.2.3 - É de responsabilidade de quem solicita o talento conferir se o membro ‘e cadastrado no Banco de Tempo, bem como é de responsabilidade de quem oferece um serviço conferir se o solicitante possui créditos para a troca;</p>
-<p> 3.2.4 - Associados que não responderem por três vezes consecutivas, de solicitante igual ou diferente, incorre em exclusão do cadastro. É considerado o tempo de cinco dias para configurar solicitação não respondida. É necessário reportar através do formulário de atualização de créditos.</p>
-<p> 3.2.5 - Se um serviço é solicitado, o solicitante:</p>
- <p> 3.1.5.1. Avisando contratempo com mínimo de 24 HORAS de antecedência pode-se fazer a remarcação.</p>
- <p> 3.1.5.2. Reincidindo a falta, o crédito é transferido para o prestador do serviço;</p>
-
-<p> 3.2.6. Em caso de aulas em grupo, o prazo mínimo para cancelamento é de 24HORAS.</p>
-<p>3.2.7. Em caso de não comparecimento em uma solicitação de serviço combinado:</p>
- <p>3.1.7.1. Com aviso prévio mínimo de 24 HORAS, pode-se fazer a remarcação.</p>
- <p>3.1.7.2. Sem aviso prévio mínimo, é transferido o crédito para o solicitante.</p>
- <p>3.1.7.3. Sem aviso prévio por duas vezes, para com associado igual ou diferente, incorre em exclusão do cadastro.</p>
-
-<p>3.2.8. A cobrança compulsória de faltas feita pelo Banco de Tempo só é feita a partir do cumprimento da regra 3.1.2 Caso contrário serão feitas mediante solicitação do faltante.</p>
-
-<h5>3.3. VALOR E CUSTOS</h5>
-<p>3.3.1. Não se fazem dívidas no banco de tempo;</p>
-<p>3.3.2. Não serão incluídos no valor da troca: tempo de deslocamento, tempo de preparo para a doação do talento e gastos inerentes ao talento não podendo ser cobrados em horas nem em dinheiro;</p>
-<p>3.3.3. Se o serviço contratado for a mão de obra, o material deverá ser fornecido pelo solicitante. Ex: para a construção de um muro, personal chef, etc.</p>
-<p>3.3.4. O tempo de qualquer serviço é sempre o tempo de serviço prestado, exceto:</p>
- <p>3.3.4.1. Serviços que levem muitas horas. Ex : estadia em pousadas, criação de sites.</p>
- <p>3.3.4.2. Serviços que não exijam encontros presenciais. Ex : edição de fotos. </p>
- <h6> Parágrafo único: em casos como os citados anteriormente, o valor final do serviço pode ser negociado por ambas as partes.</h6>
-<p>3.3.5 - Depois das horas prestadas, uma das partes deve preencher o formulário de atualização de créditos (preferencialmente quem recebeu o serviço), informando a quantidade de horas, o destinatário e o serviço prestado, para que possa ser feita a transferência. Para difundir o princípio da transparência, as atualizações não são feitas inbox nem comentários em outras publicações do grupo;</p>
-
-<p>3.3.6. Os serviços devem necessariamente ser feitos por quem receberá o crédito. É vedada a prática de terceirização no banco de tempo.</p>
-<p>3.3.7. No Banco de Tempo de Florianópolis não é permitido:</p>
- <p>3.3.7.1. Cobranças mistas (horas/ dinheiro)</p>
- <p>3.3.7.2. Vendas casadas (ex: primeira consulta paga em horas, próximas pagas em dinheiro)</p>
- <p>3.3.7.3. Revenda de produtos adquiridos por horas.</p>
-<h6>Qualquer das práticas acima mencionadas incorrem em exclusão permanente do cadastro.</h6>
-
-<!--3.8 - É permitida a locação de espaços via banco de tempo, sendo seu valor o equivalente ao tempo de locação. -->
-
-<h3>4. PRODUTOS</h3>
-<p>4.1 - Para se oferecer um produto, deve-se fazer uma postagem contendo valor (tempo) e foto ilustrativa, para que se estabeleça o princípio da transparência;</p>
-<p>4.2 - Produtos em troca de tempo apenas os produzidos por talentos. Logo, não é permitido alugar, trocar produtos usados nem revendas por créditos;</p>
-
-<p>4.3 - É de responsabilidade do ofertante garantir a qualidade de seu produto.</p>
-<p>4.4 - Quem oferece um produto arca com seus custos materiais.</p>
-
-<h3>5. AÇÕES EM GRUPO</h3>
-<p>5.1 - Ganho de horas em conjunto - Todo trabalho em grupo no Banco de Tempo gera créditos para o sócio e para o Banco;</p>
-
-<p>5.2 - Os créditos do Banco são usados pela administração do Banco de Tempo, afim de promover novas ações de integração dos associados, dentro do grupo e fora dele;</p>
-<p>5.3 - A regra geral para atividades em grupo é: o proponente recebe exatamente a hora do serviço que ofereceu, independente da quantidade de participantes, indo o excedente para o caixa de projetos sociais do Banco de Tempo.</p>
-<p>5.4 - Ações em grupo se refere a 3 modalidades, cada qual com suas regras específicas, são elas:</p>
-<p>5.4.1 - Projeto sociais - (vide item 8);</p>
-<p> 5.4.2 - Eventos coletivos - (vide item 6);</p>
-<p> 5.4.3 - Aulas/terapias fixas - (vide item 7);</p>
-<h3>6. EVENTOS COLETIVOS</h3>
-<p>6.1 - Eventos coletivos são caracterizados como ações de vivências/cursos/terapias de um dia, ou mais, onde o proponente oferece o evento aos associados, via postagem no grupo, além de  acrescentar à “Agenda” do Banco;</p>
-<p>6.2 - O proponente ganha créditos referente somente as horas ocorridas no evento, independente do número de inscritos;</p>
-<p>6.3 -  O evento pode ser realizado por mais de um associado, neste caso todos ganham a mesma quantidade de horas;</p>
-<p>6.4 - Uma lista com o nome dos inscritos deve ser enviada à administração pelo proponente para a contabilidade do excedente das horas, que será direcionada ao caixa do Banco para patrocínio de projetos sociais;</p>
-<p>6.5 - As inscrições podem ser canceladas, sem o ônus das horas creditadas, se for comunicado ao proponente até 24 horas antes do evento;</p>
-<p>6.6 - O evento deve ser divulgado conforme padrões estabelecidos (vide final do documento).</p>
-<h3>7. AULAS/TERAPIAS FIXAS</h3>
-<p>7.1 - Aulas/terapias fixas são caracterizadas por encontros regulares que acontecem dentro do período de um mês. Elas podem ocorrer em grupos, ou de forma individual, e devem ser anunciadas aos associados por postagens no grupo.</p>
-<p>7.2 - O proponente ganha créditos referente somente as horas ocorridas nas aulas/terapias, independente do número de matriculados;</p>
-<p>7.3 - Os créditos são lançados em forma de mensalidade, de uma única vez, no ato da matrícula;
-<p>7.4 - Quando um associado não informar ao proponente sua falta com antecedência de 24 horas, o encontro não será reagendado, e as horas serão creditadas da mesma forma;</p>
-<p>7.5 - Caso o associado não fique satisfeito, ou se arrependa, ele poderá cancelar sua matrícula somente após a primeira aula, com os créditos descontados do primeiro encontro;</p>
-<p>7.6 - É responsabilidade do proponente passar a lista com o nome dos matriculados para a administração fazer a contabilidade de horas;</p>
-<p>7.7 - O Banco de Tempo preza pela qualidade das aulas/terapias, é responsabilidade do proponente garantir a sua qualidade;</p>
-<p>7.8 - As aulas/terapias devem ser divulgados conforme padrões estabelecidos (vide  final do documento).</p>
-
- <h3>8. PROJETOS SOCIAIS</h3>
-<p>8.1 - Um dos objetivos do Banco é a promoção de AÇÕES SOCIAIS;</p> 
-
-<p>8.2 - Esta promoção se dá pelos créditos pertencentes ao Banco;</p>
-<p>8.3 - Caracterizam-se projetos sociais as ações financiadas pelo Banco de Tempo, voltadas para a comunidade (máximo de participantes não cadastrados no banco);</p>
-
-<p>8.4 - Estas ações podem acontecer em grupo ou individualmente, cabendo a cada proponente e/ ou equipe organizadora a responsabilidade sobre as mesmas, ficando responsável pela organização, distribuição de créditos e posterior divulgação no grupo do feedback do evento, além da lista de participantes para atualização de créditos pelos administradores;</p>
-
-<p>8.5 - Os sócios são priorizados a participarem dos projetos de acordo com o saldo de créditos. Quanto menos créditos o associado tiver, maior será a prioridade em participar;</p>
-
-<p>8.6 - As instituições e/ou pessoas beneficiadas com estas ações serão decididas de acordo com as necessidades e possibilidades do momento;</p>
-<p>8.7 - As horas cedidas podem variar conforme a pertinência do projeto para a sociedade e a probabilidade de grande público, sendo que para uma ação inicial recomenda-se uma margem 
-<p>8.8 - Toda proposta de projeto social deve ser enviado diretamente para a administração do Banco com “orçamento de horas”, para análise e admissão, com antecedência mínima de sete dias.</p>
-
-<h3>9. DOS ASSOCIADOS</h3>
-
-<p>9.1 - Um associado do banco de tempo é aquele que possui o cadastro aprovado, contando com seus produtos e serviços na planilha oficial.</p>
-<p>9.2 - Pessoas que apenas fazem parte do grupo Banco de Tempo de Florianópolis, e não possuem seus talentos e serviços cadastrados na planilha oficial, não são considerados associados.</p>
-<p>9.3 - Para a realização de trocas através do Banco de Tempo é indispensável que ambas as partes estejam cadastradas;</p>
-
-<h3>10. DOS CRÉDITOS</h3>
-<p>10.1 - A base de trocas é o tempo sendo que 1 crédito corresponde a 1 hora, independente do talento oferecido;</p>
-<p>10.2 - A fração mínima do crédito é de meio crédito (meia hora).</p>
-<p>10.3 - É permitido para um associado presentear um serviço ou produto para outra pessoa, pagando-o com créditos seus.</p>
- <p>10.3.1 - Não é permitido presentear outros membros com serviços pagos pelos 4 créditos iniciais, sendo esses reservados para trocas do novo membro cadastrado.</p>
-<p>10.4 - Não é permitida a transferência direta de créditos entre os associados, sem que tenha havido troca de serviços.</p>
-<p>10.5 - Não é permitida a utilização de créditos do banquinho de tempo para serviços prestados a adultos.</p>
-
-<h3>11. OPERACIONAL</h3>
-<p>11.1 - Toda operação realizada pela administração é de forma colaborativa, sendo remunerado pelo Banco de Tempo pelos serviços prestados.</p>
-
-<p>11.2 - A página do Banco tem a finalidade única de divulgar o grupo, seus serviços e ações;</p>
-
-<p>11.3 - Só pode ser indicado através de comentários ou postagens, pessoas que são sócias do Banco, isto é, pessoas que oferecem talentos;</p>
-
-<p>11.4 - Em caso de desligamento sem aviso prévio, a ADM, logo após verificar o desligamento da pessoa, deverá excluir também o serviço e os créditos pertencentes a ela.</p>
-
-<h3>12. REGRAS DO GRUPO :</h3>
-<p>12.1 - Não serão aceitas publicações que não sejam diretamente relacionadas ao Banco de Tempo;</p>
-<p>12.2 - As postagens de oferta devem seguir o padrão estipulado. (vide  final do documento);</p>
-<p>12.3 - O Banco preza pela cordialidade entre os membros e sócios, não será admitido nenhuma ofensa entre os participantes, caso ocorra, o sócio ou membro será avaliado e, se for o caso, excluído do grupo. </p>
-
-
-<h3> 13. A MOEDA</h3>
-<p>13.1 - O Banco de Tempo de Florianópolis funciona exclusivamente com doação de talentos que se materializam através da troca de serviços entre associados;</p>
-
-<p>13.2 - Fica definido a PROIBIÇÃO de impressão de papel moeda em nome do Banco. Toda movimentação de Horas prestadas serão atualizadas pela administração do banco virtualmente através da página do próprio Banco;</p>
-
-<p>13.3 - O Banco terá uma lista de créditos, atualizado sempre, de acordo com disponibilidade dos administradores .</p>
-
-<h3>14. DA SAÍDA DE ASSOCIADOS:</h3>
-<p>14.1 - Para sair do Banco de Tempo basta contactar a administração do grupo.</p>
-<p>14.2 - Da saída de um associado, serão retirados 10 créditos de sua conta, podendo o excedente ser direcionado para outro associado à escolha do solicitante ou voltará para o caixa do Banco.</p>
-
-<p>14.3 - Caso não hajam 10 créditos completos na conta de quem solicita sua saída, serão subtraídos do caixa de projetos sociais. </p>
-
-<h3>15. DA EXCLUSÃO DE ASSOCIADOS</h3>
-
-<h5>15.1 - O associado será excluido do banco de tempo se: </h5>
- <p>15.1.1 - Cobrar em dinheiro serviços oferecidos pelo Banco de Tempo;</p>
- <p>15.1.2 - Valorar seu serviço em um tempo diferente pelo serviço prestado;</p>
- <p>15.1.3 - Fizer cobrança mista pelo serviço prestado (hora/ dinheiro) ou venda casada;</p>
- <p>15.1.4 - Revender produtos adquiridos por horas</p>
- <p>15.1.5 - Transferir créditos para outro membro sem que tenha sido prestado um serviço;</p>
- <p>15.1.6 - Não responder a uma solicitação de serviço por três vezes;</p>
- <p>15.1.7 - Não comparecer a um serviço combinado, sem aviso prévio por três vezes;</p>
- <p>15.1.8 - Desrespeitar ou ofender gravemente outro membro do Banco;</p>
- <p>15.1.9 - Indicar mediante solicitação de serviços, na timeline do grupo, serviços de pessoas não cadastradas no BT<p>
-
-<h3>Padrão de procura:</h3>
-<h6>Postar [PROCURO]</h6>
-<p> [PROCURO]Alguém que possa fotografar um aniversário no bairro do Matadeiro dia 11/11.</p>
-<h6>Padrão de ofereço:</h6>
-<p>Postar [ OFEREÇO ], com foto (pode ser na opção “vender ítem” e no “preço” colocar o valor em horas e/ou indicar na própria publicação . Para produtos é necessário indicar quantidade ou tamanho .</p>
-<p>[OFEREÇO] Bolo de 500g por 1h.</p>
-
-<p>Eventos Coletivos/Fixos:Atividade proposta / tempo de duração / local / responsável / vagas / custo em créditos.</p>
-<p>Aulas de Sapateado.Toda TERÇA-FEIRA, das 14:00 às 15:00Morro das Pedras – Rua …….Responsável: João ….Vagas: 9Investimento: 4 horas mês</p>
+</span>
+<BR><BR>
+<span class="text-secondary">
+Num Banco de Tempo, o importante não é aquilo que a gente faz pra ganhar dinheiro.<BR>
+O mercado profissional valoriza nossos talentos de acordo com que o mercado precisa e essa valoriza nem sempre coincide com o que a comunidade que participamos precisa formamos precisa na realidade. Num Banco de Tempo, a gente valoriza o talento de cada um - aquilo que a gente sabe fazer com gosto, os talentos que a gente desenvolveu ao longo de nossa vida toda, mas que nem sempre são valorizados financeiramente. Por isso, a nossa moeda é o tempo que a gente usa ao oferecer esse talento pra alguém. Tempo é igual para qualquer um. Uma hora que vc passa prestando um serviço a alguém do grupo é a mesma hora que alguém vai usar prestando um serviço a você. Ai, vc fica livre pra escolher (e valorizar) como é que você vai usar seu tempo.</span>
 
 
 {% endblock %}

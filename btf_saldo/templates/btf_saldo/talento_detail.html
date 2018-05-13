@@ -1,21 +1,24 @@
+<!-- base.html -->
 {% extends 'btf_saldo/base.html' %}
 
-{% block content %}
+<!-- staticfiles -->
+{% load staticfiles %}
 
-<h3>Cadastro de Talentos</h3>
+<!-- block content -->
+{%	block	content	%}
+
+<!-- aqui static -->
+{% load static %}
+<!-- aqui bootstrap4 -->
+{% load bootstrap4 %}
 
 
-	<p><small>Seu talento está cadastrado no BTF.</small></p>
+	<div class="container text-left">
+    	<h3 class="display-0 m-0">Cadastro de Talentos - OK</h1>
+		
+    	<p class="small text-info">
+      	* Seu talento foi cadastrado na Lista de Talentos do BTF. </p>
 
-    <div class="post">
-            
-        <p> Seu nome cadastrado no BTF: {{ talento.quem }}</p>
-        <p> Area do Talento: {{ talento.talentoclasse }}</p>
-        <p>Descrição: {{ talento.descricao }}</p>
-        <p>Experienca: {{ talento.experiencia }}</p>
-        <p>Regiao: {{ talento.regiao }}</p>
-
-    </div>
 
 <table border=0>
 <tr>
