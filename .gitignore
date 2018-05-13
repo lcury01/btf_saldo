@@ -2,6 +2,8 @@
 *~
 __pycache__
 myvenv
+btf_env
+dal_env
 db.sqlite3
 /static
 .DS_Store
