@@ -1,0 +1,18 @@
+{% extends 'btf_saldo/base_operacao.html' %}
+
+{# Load the tag library #}
+{% load bootstrap4 %}
+
+{# Load CSS and JavaScript #}
+{% bootstrap_css %}
+{% bootstrap_javascript jquery='full' %}
+
+{% block content %}
+
+<p class="text-dark">você está na área restrita do aplicativo Banco de Tempo</p>
+<BR>
+<span class="text-dark">
+Se você é uma das pessoas que colaboram com os bastidores do Banco de Tempo, você deve ter uma senha de acesso diferente que te permite acessar este site.<BR>
+
+
+{% endblock %}

@@ -1,0 +1,79 @@
+<!-- base.html -->
+{% extends 'btf_saldo/base_operacao.html' %}
+
+<!-- staticfiles -->
+{% load staticfiles %}
+
+<!-- block content -->
+{%	block	content	%}
+
+<!-- aqui static -->
+{% load static %}
+<!-- aqui bootstrap4 -->
+{% load bootstrap4 %}
+
+<!-- script autocomplete -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.js" type="text/javascript"></script>
+
+	<h3 class="text-primary">Liberação/Bloqueio de Cadastro de Talentos</h3>
+	<h4 class="text-secondary">Regras</h4>
+	<spam class="text-info">
+	Associados podem cadastrar seus talentos depois de 30 dias do cadastro, mas precisam usar as 4 horas iniciais. <BR>Quando as horas forem usadas, eles precisam ter o cadatro liberado.<BR>
+	Pode-se bloquear o cadastro dos talentos (novos e já cadastrados).
+	
+	<BR><BR>
+	<spam class="text-dark"><small>
+	Hoje é {{data}}<BR>
+	Só pode liberar quem se cadastrou antes de {{data30}}</small><BR></spam>
+
+
+	
+
+
+	<div class="table-responsive">
+	<table class="table table-hover table-sm">
+		<thead class="thead-light">
+			<tr>
+				<th scope="col"> Nome </th> 
+				<th scope="col"> Dt. Cadastro</th>
+				<th scope="col"> Dt. Liberação</th>
+				<th scope="col"> Dt. Bloqueio</th>				
+			</tr>
+		</thead>
+		<tbody>
+		
+		{% for	bloq	in	bloqs	%}
+			
+			{%	if bloq.liberado  %}					
+				<tr>
+				
+					<td> {{	bloq.nome	}} </td>	
+					<td>{{bloq.dt_cadastro}}</td>
+					<td>{{bloq.dt_liberado}}</td>
+					<td>{{bloq.dt_bloqueio}}</td>					
+					<td><a class="btn btn-default" href="{% url 'bloquear' pk=bloq.pk %}">Bloqueia</span></a></td>
+
+				</tr>
+			{%	else	%}
+			
+				<tr>
+					<td> {{	bloq.nome	}} </td>	
+					<td>{{bloq.dt_cadastro}}</td>
+					<td>{{bloq.dt_liberado}}</td>
+					<td>{{bloq.dt_bloqueio}}</td>
+					<td><a class="btn btn-default" href="{% url 'desbloquear' pk=bloq.pk %}">Liberar</span></a></td>
+
+				</tr>
+			{%	endif %}
+
+		{% 	empty	%}	
+
+			<tr class="table-info"><td colspan="3">Não existem associados a liberar/bloquear.</td></tr>
+			
+		{%	endfor	%}
+		
+		</tbody>
+	</table>
+	</div>
+
+{% endblock %}

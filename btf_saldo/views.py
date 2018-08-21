@@ -1,22 +1,146 @@
-
+from datetime import date
 from django.utils import timezone
 from django.shortcuts import render, get_object_or_404, redirect
 
+
 from dal import autocomplete
+
+from .filters import TalentosFilter
 
 from .models import Cadastro
 from .models import CadastroAUX
-from .models import Lancamento2
+from .models import PreCadastro
+from .models import Lancamento
 from .models import Transferencia
 from .models import Talento
+
 from .forms import LancamentoForm
 from .forms import TalentoForm
 from .forms import CadastroForm
+from .forms import PreCadastroForm
+from .forms import AssocForm
 
 # a partir daqui
 
 def home(request):
 	return 	render(request, 'btf_saldo/inicio.html')
+
+def operacao(request):
+    return  render(request, 'btf_saldo/inicio_operacao.html', {'operacao': True})
+
+def transferencia(request):
+    return  render(request, 'btf_saldo/inicio_operacao.html', {'operacao': True})
+
+def eventos(request):
+    return  render(request, 'btf_saldo/inicio_operacao.html', {'operacao': True})
+
+def administrativo(request):
+    return  render(request, 'btf_saldo/inicio_operacao.html', {'operacao': True})
+
+def libera_lista(request):
+    data=date.today()
+    data30=date.fromordinal(data.toordinal()-30)
+
+    bloqs = Cadastro.objects.filter(dt_cadastro__date__lt=data30)
+    return  render(request, 'btf_saldo/libera_lista.html', {'bloqs':bloqs, 'data':data, 'data30':data30, 'operacao': True})
+
+def desbloquear(request, pk):
+    
+    if request.method == "POST":
+        bloqs = get_object_or_404(Cadastro, pk=pk)
+        bloqs.libera()
+
+        data=date.today()
+        data30=date.fromordinal(data.toordinal()-30)
+
+        bloqs = Cadastro.objects.filter(dt_cadastro__date__lt=data30)
+        return  render(request, 'btf_saldo/libera_lista.html', {'bloqs':bloqs, 'data':data, 'data30':data30, 'operacao': True})
+    
+    else:       
+        bloqs2 = get_object_or_404(Cadastro, pk=pk)
+        return render(request, 'btf_saldo/libera_detalhe.html', {'bloqs2': bloqs2, 'operacao': True})
+
+def bloquear(request, pk):
+    
+    if request.method == "POST":
+        bloqs = get_object_or_404(Cadastro, pk=pk)
+        bloqs.bloqueia()
+
+        data=date.today()
+        data30=date.fromordinal(data.toordinal()-30)
+
+        bloqs = Cadastro.objects.filter(dt_cadastro__date__lt=data30)
+        return  render(request, 'btf_saldo/libera_lista.html', {'bloqs':bloqs, 'data':data, 'data30':data30, 'operacao': True})
+    
+    else:       
+        bloqs2 = get_object_or_404(Cadastro, pk=pk)
+        return render(request, 'btf_saldo/libera_detalhe.html', {'bloqs2': bloqs2, 'operacao': True})
+
+def cadastro_list(request):    
+    cadastros   =   Cadastro.objects.all()
+    return  render(request, 'btf_saldo/assoc_list.html',  {'cadastros':cadastros, 'operacao': True})      
+
+def cadastro_detail(request, pk):
+    cadastros = get_object_or_404(Cadastro, pk=pk)
+    return render(request, 'btf_saldo/assoc_detail.html', {'cadastros': cadastros, 'operacao': True})
+
+
+def assoc_crud(request, pk):
+    cadastros = get_object_or_404(Cadastro, pk=pk)
+    if request.method == "POST":
+        form = AssocForm(request.POST,instance=cadastros)
+        if form.is_valid():
+            cadastros = form.save(commit=False)
+            cadastros.save()
+            #return redirect('btf_saldo.views.cadastro_list')   
+            return  redirect('cadastro_list')    
+    else:       
+        form    =   AssocForm(instance=cadastros)
+    return  render(request, 'btf_saldo/assoc_edit.html', {'form':    form, 'operacao': True})    
+
+def assoc_add(request):
+    if request.method == "POST":
+
+        form = AssocForm(request.POST)
+        if form.is_valid():
+            cadastros = form.save(commit=False)
+            cadastros.saldo_inicial= 4;
+            cadastros.liberado = False;
+            cadastros.save()
+        
+            return  redirect('cadastro_list')    
+    else:       
+        form    =   AssocForm()
+        return  render(request, 'btf_saldo/assoc_edit.html', {'form':    form, 'operacao': True})
+   
+
+def talentos_filtro(request):
+    talentos_list = Talento.objects.all()
+    talentos_filter = TalentosFilter(request.GET, queryset=talentos_list)
+    return render(request, 'btf_saldo/talentos_filtro_new.html', {'filter': talentos_filter, 'operacao': True})
+    #return render(request, 'btf_saldo/talentos_filtro_new.html')
+
+def talentos_edit2(request, pk):
+    talento = get_object_or_404(Talento, pk=pk)
+    if request.method == "POST":
+        form = TalentoForm(request.POST, instance=talento)
+        if form.is_valid():
+            talento = form.save(commit=False)
+            talento.save()
+            return redirect('talentos_filtro')   
+    else:
+        form = TalentoForm(instance=talento)
+    return render(request, 'btf_saldo/talento_edit.html', {'form': form, 'operacao': True})    
+
+
+
+def talentos_lista(request, cad):
+    return  render(request, 'btf_saldo/funcionamento.html')
+
+def talentos_detalhe(request, pk):
+    return  render(request, 'btf_saldo/funcionamento.html')
+
+
 
 def funcionamento(request):
     return  render(request, 'btf_saldo/funcionamento.html')
@@ -37,24 +161,17 @@ def geral(request):
     cadastros   =   Cadastro.objects.all()
     return  render(request, 'btf_saldo/geral.html',  {'cadastros':cadastros})    
 
-def cadastro_list(request):    
-    cadastros   =   Cadastro.objects.all()
-    return  render(request, 'btf_saldo/cadastro_list.html',  {'cadastros':cadastros})    
-
-def cadastro_detail(request, pk):
-    cadastros = get_object_or_404(Cadastro, pk=pk)
-    return render(request, 'btf_saldo/cadastro_detail.html', {'cadastros': cadastros})
 
 def cadastro_crud(request):
 	if request.method == "POST":
-		form = CadastroForm(request.POST)
+		form = PreCadastroForm(request.POST)
 		if form.is_valid():
-			cadastro = form.save(commit=False)
-			cadastro.save()
+			precadastro = form.save(commit=False)
+			precadastro.save()
 			#return	redirect('btf_saldo.views.cadastro_list')	
 			return	render(request,	'btf_saldo/cadastro_edit.html',	{'form':	form})    
 	else:		
-		form	=	CadastroForm()
+		form	=	PreCadastroForm()
 	return	render(request,	'btf_saldo/cadastro_edit.html',	{'form':	form})    
 
 def movimentacao(request, pk):    
@@ -62,7 +179,7 @@ def movimentacao(request, pk):
     return render(request, 'btf_saldo/movimentacao.html',  {'transfs':transfs})
 
 def lancamento_detail(request, pk):
-    lancamento = get_object_or_404(Lancamento2, pk=pk)
+    lancamento = get_object_or_404(Lancamento, pk=pk)
     return render(request, 'btf_saldo/lancamento_detail.html', {'lancamento': lancamento})
 
 def lancamento_new(request):
@@ -71,25 +188,26 @@ def lancamento_new(request):
 		if form.is_valid():
 			lancamento = form.save(commit=False)
 			lancamento.save()
-			return	redirect('btf_saldo.views.lancamento_detail',	pk=lancamento.pk)	
+			return	redirect('lancamento_detail',	pk=lancamento.pk)	
 	else:		
 		form	=	LancamentoForm()
 	return	render(request,	'btf_saldo/lancamento_edit.html',	{'form':	form})    
 
 def talento_list(request):    
-    talentos   =   Talento.objects.all().order_by('talentoclasse','regiao')
+    talentos   =   Talento.objects.filter(quem__liberado=True).order_by('talentoclasse','regiao')
     return  render(request, 'btf_saldo/talento_list.html',  {'talentos':talentos})    
 
-def talento_crud(request):    
-	if request.method == "POST":
-		form = TalentoForm(request.POST)
-		if form.is_valid():
-			talento = form.save(commit=False)
-			talento.save()
-			return	redirect('btf_saldo.views.talento_edit',	pk=talento.pk)	
-	else:		
-		form	=	TalentoForm()
-	return	render(request,	'btf_saldo/talento_crud.html',	{'form':	form})    
+def talento_crud(request):
+    
+    if request.method == "POST":
+        form = TalentoForm(request.POST)
+        if form.is_valid():
+            talento = form.save(commit=False)
+            talento.save()
+            return redirect('talento_edit', pk=talento.pk)
+    else:
+        form = TalentoForm()
+    return render(request, 'btf_saldo/talento_crud.html', {'form': form})    
 
 
 def talento_detail(request, pk):
@@ -115,7 +233,7 @@ class NomeAutocomplete(autocomplete.Select2QuerySetView):
         #if not self.request.user.is_authenticated():
         #    return Cadastro.objects.none()
 
-        qs = Cadastro.objects.all()
+        qs = Cadastro.objects.filter(liberado=True)
 
         if self.q:
             qs = qs.filter(nome__istartswith=self.q)

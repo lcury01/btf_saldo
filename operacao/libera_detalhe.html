@@ -1,0 +1,40 @@
+{% extends 'btf_saldo/base_operacao.html' %}
+
+<!-- staticfiles -->
+{% load staticfiles %}
+
+<!-- block content -->
+{%	block	content	%}
+
+<!-- aqui static -->
+{% load static %}
+<!-- aqui bootstrap4 -->
+{% load bootstrap4 %}
+	
+	<H4 class = "text-primary">
+	{% if bloqs2.liberado %}
+		Bloqueio Cadastro de Talento
+	{% else %}
+		Liberação Cadastro de Talento
+	{% endif %}
+	</H4>
+
+	
+		<table>
+			<tr> <td>Nome </td>	<td> {{	bloqs2.nome	}} </td>	</tr>
+			<tr>	<td>Cadastro Feito em:</td><td>{{bloqs2.dt_cadastro}}</td> </tr>
+			<tr>	<td>Foi Liberado em: </td><td>{{bloqs2.dt_liberado}}</td></tr>
+			<tr>	<td>Foi Bloqueado em:</td><td>{{bloqs2.dt_bloqueio}}</td></tr>
+			<tr>	<td>Status Atual:</td><td>{{bloqs2.liberado}}</td></tr>
+
+		</table>
+		
+		{{ form.media.css }}
+		<form	method="POST"	class="post-form">{%	csrf_token	%}
+
+
+			{% buttons submit='Gravar' reset="Cancelar" %}{% endbuttons %}		
+
+		</form>
+
+{%	endblock	%}

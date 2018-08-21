@@ -1,9 +1,35 @@
+<!-- base.html -->
 {% extends 'btf_saldo/base.html' %}
 
+<!-- staticfiles -->
+{% load staticfiles %}
+
+<!-- block content -->
 {%	block	content	%}
-				<h3>Nova Transferencia de Créditos</h3>
-				<form	method="POST"	class="post-form">{%	csrf_token	%}
-								{{	form.as_p	}}
-								<button	type="submit"	class="save	btn	btn-default">Guardar</button>
-				</form>
-{%	endblock	%}
+
+<!-- aqui static -->
+{% load static %}
+<!-- aqui bootstrap4 -->
+{% load bootstrap4 %}
+
+<!-- script autocomplete -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.js" type="text/javascript"></script>
+
+<!-- aqui form media -->
+	{{ form.media.css }}
+	
+	<div class="container text-left">
+    	<h3 class="display-0 m-0">Transferencia de Créditos</h1>
+    	
+  	</div>
+
+	<form	method="POST"	class="post-form">{%	csrf_token	%}
+		{% bootstrap_form form %}			
+
+		{% buttons submit='Gravar' reset="Cancelar" %}{% endbuttons %}		
+
+	</form>
+
+	<!-- form media -->
+{{ form.media.js }}
+{% endblock %}

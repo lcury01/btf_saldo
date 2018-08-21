@@ -1,0 +1,27 @@
+<!-- base.html -->
+{% extends 'btf_saldo/base.html' %}
+
+<!-- staticfiles -->
+{% load staticfiles %}
+
+<!-- block content -->
+{%	block	content	%}
+
+<!-- aqui static -->
+{% load static %}
+<!-- aqui bootstrap4 -->
+{% load bootstrap4 %}
+
+<!-- script autocomplete -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.js" type="text/javascript"></script>
+
+  <form method="get">
+    {{ filter.form.as_p }}
+    <button class="button" type="submit">Search</button>
+  </form>
+  <ul>
+  {% for talento in filter.qs %}
+    <li>{{ talento.quem }} - {{ talento.descricao }} </li>
+  {% endfor %}
+  </ul>
+{% endblock %}

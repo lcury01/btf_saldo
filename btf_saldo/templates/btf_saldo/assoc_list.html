@@ -1,0 +1,32 @@
+{% extends 'btf_saldo/base.html' %}
+
+{% block content %}
+
+<h3>Lista de Associados do BTF</h3>
+	<table class="table">
+	<tr class="">
+		<th>&nbsp;</th>
+		<th>Nome</th>
+		<th>Inclusao</th>
+		<th>Dt Liberação</th>
+		<th>Bloqueio</th>
+	</tr>
+
+	{%	for	cadastro	in	cadastros	%}
+		<tr>
+			{% if cadastro.liberado %}
+				<td> &nbsp;</td>
+			{% else %}
+				<td> Bloqueado</td>
+			{% endif %}
+			<td><a href="{% url 'cadastro_detail' pk=cadastro.pk %}"> {{ cadastro.nome}}</a></td>	
+			<td>{{ cadastro.dt_cadastro|date:'d/m/Y'}}</td>
+			<td>{{ cadastro.dt_liberado|date:'d/m/Y'}}</td>
+			<td>{{ cadastro.dt_bloqueio|date:'d/m/Y'}}</td>			
+		</tr>
+
+		
+	{%	endfor	%}
+	</table>
+
+{% endblock %}

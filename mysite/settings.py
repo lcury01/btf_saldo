@@ -46,17 +46,26 @@ INSTALLED_APPS = [
     'btf_saldo'
 ]
 
-MIDDLEWARE_CLASSES = [
+#MIDDLEWARE_CLASSES = [
+#    'django.contrib.sessions.middleware.SessionMiddleware',
+#    'django.middleware.security.SecurityMiddleware',
+#   'django.middleware.common.CommonMiddleware',
+#    'django.middleware.csrf.CsrfViewMiddleware',
+#    'django.contrib.auth.middleware.AuthenticationMiddleware',
+#    'django.contrib.auth.middleware.SessionAuthenticationMiddleware',
+#    'django.contrib.messages.middleware.MessageMiddleware',
+#    'django.middleware.clickjacking.XFrameOptionsMiddleware',
+#]
+
+MIDDLEWARE = [
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.security.SecurityMiddleware',
-    'django.middleware.common.CommonMiddleware',
+   'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
-    'django.contrib.auth.middleware.SessionAuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
-
 
 ROOT_URLCONF = 'mysite.urls'
 
@@ -130,6 +139,7 @@ STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 ALLOWED_HOSTS = ['127.0.0.1', '<your_username>.pythonanywhere.com']
+
 
 
 

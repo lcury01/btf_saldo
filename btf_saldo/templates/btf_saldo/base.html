@@ -37,8 +37,63 @@
             <div class = "text-secondary"> vr. Beta </div>
       </div>
 
+  {% if operacao %}
 
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="background-color: #e3f2fd;">
+        
+          <a class="navbar-brand" href="{% url 'operacao' %}"> Operação BTF </a>  
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+          </button>
+        
+        
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+        
+         <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Talentos
+              </a>
 
+              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <a class="dropdown-item" href="{% url 'libera_lista' %}">Libera/Bloqueia Talentos</a>
+                <a class="dropdown-item" href="{% url 'talentos_filtro' %}">Edição Talentos</a> 
+              </div>
+            </li>
+            
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Adm
+              </a>
+
+              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <a class="dropdown-item" href="{% url 'geral' %}">Associados</a>
+                <a class="dropdown-item" href="{% url 'administrativo' %}">Projetos Sociais</a>
+                <a class="dropdown-item" href="{% url 'eventos' %}">Regioes Talento</a>
+                <a class="dropdown-item" href="{% url 'eventos' %}">Classes Talento</a>          
+
+              </div>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Creditos
+              </a>
+
+              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <a class="dropdown-item" href="{% url 'transferencia' %}">Trocas</a>
+                <a class="dropdown-item" href="{% url 'administrativo' %}">Administrativos</a>
+                <a class="dropdown-item" href="{% url 'eventos' %}">Eventos</a>          
+              </div>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+  <br><br>
+  
+  {% else %}
+    
       <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="background-color: #e3f2fd;">
         
           <a class="navbar-brand" href="{% url 'home' %}"> BTF </a>  
@@ -49,25 +104,7 @@
         
           <div class="collapse navbar-collapse" id="navbarNavDropdown">
           <ul class="navbar-nav">
-        <!--
-            <li class="nav-item active">
-              <a class="nav-link" href="{% url 'home' %}">Inicio<span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="{% url 'lancamento_new' %}">Transferir Créditos</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="{% url 'geral' %}">Saldos</a>
-            </li>
-
-            <li class="nav-item">
-              <a class="nav-link" href="{% url 'cadastro_list' %}">Cadastros</a>
-            </li>
-
-            <li class="nav-item">
-              <a class="nav-link" href="{% url 'cadastro_crud' %}" >Novo Cadastro</a>
-            </li>
-      -->
+        
          <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 O que é
@@ -97,7 +134,9 @@
       </nav>
 
   <br><br>
-      
+
+  {% endif %}      
+
               {% block content %}
 
 

@@ -1,0 +1,75 @@
+{% extends 'btf_saldo/base.html' %}
+
+<!-- staticfiles -->
+{% load staticfiles %}
+
+<!-- block content -->
+{%	block	content	%}
+
+<!-- aqui static -->
+{% load static %}
+<!-- aqui bootstrap4 -->
+{% load bootstrap4 %}
+	
+	<H4 class = "text-primary">
+	
+	{% if bloqs2.liberado %}
+		Bloqueio Cadastro de Talento
+	{% else %}
+		Liberação Cadastro de Talento
+	{% endif %}
+	
+	</H4>
+
+	<div class="form-group row">
+    	<label for="nome" class="col-sm-2 col-form-label">Nome:</label>
+    	<div class="col-sm-10">
+      		<label class="col-sm-3 col-form-label"> {{bloqs2.nome	}} </label>
+    	</div>
+
+		<label for="dt_cadastro" class="col-sm-2 col-form-label">Cadastro Feito em: </label>
+		<div class="col-sm-10">
+		<label class="col-sm-3 col-form-label">{{bloqs2.dt_cadastro|date:'d/m/Y H:i:s a'}} </label>
+    	</div>
+
+    	<label for="dt_liberado" class="col-sm-2 col-form-label">Liberado Talentos em:</label>
+		<div class="col-sm-10">
+		<label class="col-sm-3 col-form-label">{{bloqs2.dt_liberado|date:'d/m/Y H:i:s a'}} </label>
+    	</div>
+    	 
+    	
+		<label for="de_bloqueio" class="col-sm-2 col-form-label">Bloqueio de Talentos em:</label>
+    	<div class="col-sm-10">
+		<label class="col-sm-3 col-form-label">{{bloqs2.dt_bloqueio|date:'d/m/Y H:i:s a'}} </label>
+    	</div>
+
+
+    	<label for="liberado" class="col-sm-2 col-form-label">Estado Atual:</label>
+    	<div class="col-sm-10">
+    	{% if bloq2.liberado %}
+      		<label class="col-sm-3 col-form-label"> Liberado	</label>
+      	{% else %}
+      		<label class="col-sm-3 col-form-label"> Bloqueado </label>
+		{% endif %}
+
+    	</div>
+
+	</div>
+			
+
+	
+	{% if bloqs2.liberado %}
+		<h6 class="text-warning"> 
+		Ao clicar em gravar você vai BLOQUEAR os talentos já cadastrados do associado na lista e o associado não poderá incluir outros talentos.</h5>
+	{% else %}
+		<h6 class="text-info"> Ao clicar em gravar você vai LIBERAR os talentos já cadastrados do associado na lista e o associado poderá incluir outros talentos.</h5>
+	{% endif %}
+			
+	{{ form.media.css }}
+	<form	method="POST"	class="post-form">{%	csrf_token	%}
+
+		{% buttons submit='Gravar' reset="Cancelar" %}{% endbuttons %}		
+
+	</form>
+
+{%	endblock	%}

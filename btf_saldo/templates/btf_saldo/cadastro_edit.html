@@ -1,9 +1,132 @@
 {% extends 'btf_saldo/base.html' %}
 
+<!-- staticfiles -->
+{% load staticfiles %}
+
+<!-- block content -->
 {%	block	content	%}
-				<h1>cadastro</h1>
-				<form	method="POST"	class="post-form">{%	csrf_token	%}
-								{{	form.as_p	}}
-								<button	type="submit"	class="save	btn	btn-default">Guardar</button>
-				</form>
+
+<!-- aqui static -->
+{% load static %}
+<!-- aqui bootstrap4 -->
+{% load bootstrap4 %}
+
+<!-- script autocomplete -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.js" type="text/javascript"></script>
+
+<!-- aqui form media -->
+<div class="container text-left">
+	{{ form.media.css }}
+		<form	method="POST"	class="post-form">{%	csrf_token	%}
+
+				<h1>Cadastro BTF, tenha atenção</h1>
+				<h3> cadastros com informações incompletas não serão aceitos.</h3>
+
+				<h4>quando a gente entra num grupo, precisa saber como é que ele funciona para não cometer gafes, né ? É assim na vida e não é diferente aqui. Temos regras, você já leu estas regras ? Clique aqui se não tiver lido</h4>>
+
+				<h5>Então, vamos começar:</h5>
+				<h5>O que é preciso para se cadastrar:</h5>
+				Trocamos talentos pessoais no Banco de Tempo, portanto, empresas, grupos, associações não podem se cadastrar.
+
+				Usamos o facebook como ferramenta de comunicação entre os associados e por isso, o seu cadastro precisa ser vinculado a sua conta pessoal no facebook. o seu perfil precisa:
+				-. ter uma foto que identifique você, assim, outros associados vão saber com quem estão trocando.
+				vocẽ precisa ser membro do grupo banco de tempo de florianopolis.
+				> Se vocẽ tem um homônimo no grupo, isto quer dizer que já existe alguém com o mesmo nome que vocẽ, 
+
+
+				<div class="form-group">
+					<label for="id_nome">Qual o seu nome? </label><input type="text" class="form-control" name="nome" placeholder="nome" title="Informe seu nome completo">
+					<small class="form-text text-muted">Informe seu nome completo</small>
+				
+					<label for="id_nomefb">Qual o seu nome no Facebook </label><input type="text" class="form-control" name="nomefb" placeholder="nomefb" title="Informe seu nome tal qual ele aparece no seu perfil do Facebook. É como os outros associados vão te encontrar">
+					<small class="form-text text-muted">Informe seu nome tal qual ele aparece no seu perfil do Facebook. É como os outros associados vão te encontrar</small>
+				
+					<label for="id_paginafb">Cole a URL (link) do seu perfil do Facebook aqui </label><input type="URL" class="form-control" name="paginafb" placeholder="paginafb" title="Copie e cole a URL do seu perfil do facebook para podermos diferenciar vocẽ de outras pessos com o mesmo nome.">
+
+					<label for="id_comosoube">Como você soube do Banco de Tempo de Florianópolis </label><textarea class="form-control" cols="40" id="id_comosoube" maxlength="500" name="comosoube" placeholder="comosoube" title="Nos conte como você conheceu o Banco de Tempo de Florianópolis. Queremos saber como fazer o BTF se expandir."></textarea>
+
+					<label for="id_sabecomoparticipar">Já sabe como pode contribuir com o grupo? </label><textarea class="form-control" cols="40" id="id_sabecomoparticipar" maxlength="500" name="sabecomoparticipar" placeholder="Sabe como participar" title="Já sabe como o BTF funciona? Conhece as necessidades do grupo ou quer apenas oferecer seus talentos profissionais?"></textarea>
+
+					<label for="id_celular">Qual o seu CELULAR ou telefone de contato? </label><input type="text" class="form-control" name="celular" placeholder="celular" title="Informe um telefone de contato">
+					<small class="form-text text-muted">Informe um telefone de contato</small>
+
+					<label for="id_celular_visivel">Permite receber contatos por telefone? </label><input type="text" class="form-control" name="celular_visivel" placeholder="celular" title="Informe se você permite que seu telefone seja apresentado na lista de talentos">
+					<small class="form-text text-muted">Informe se você permite que seu telefone seja apresentado na lista de talentos</small>
+
+					<h5> Para seguir com seu cadastro, precisamos que você nos diga 3 pessoas que podem confirmar que você é uma pessoa real. Estas pessoas devem poder confirmar seus talentos e poderão ser acionadas em casos onde a segurança de outros associados precisar ser garantida.</h5>
+					
+					<div class="table-responsive">
+						<TABLE class="table">
+							<thead>
+							<tr> 
+								<th> Referencia
+									<small class="form-text text-muted">Nome de alguém que te conhece pessoalmente.</small> </th>
+								<th> Telefone
+									<small class="form-text text-muted">Uma forma de contato com a pessoa que te conhece pessoalmente</small> </th>
+
+								<th> URL Facebook
+									<small class="form-text text-muted">Se preferir, informe a URL do facebook desta pessoa.</small> </th>
+							</tr>
+							</thead>
+							<tbody>
+							<tr>
+								<td>	<input type="text" name="mn_referencia1" placeholder="mn_referencia1" title="Nome de quem pode dizer que você existe, não é um robô do facebook"></td>
+								<td>	<input type="text" name="tel_referencia1" placeholder="tel_referencia1" title="Um telefone que possamos entrar em contato com a pessoa"> </td>
+									
+								<td>	<input type="text" name="fb_referencia1" placeholder="fb_referencia1" title="Ou o perfil Facebook desta pessoa"></td>
+							</tr>
+
+							<tr>
+								<td>	<input type="text" name="mn_referencia2" placeholder="mn_referencia2" title="Nome de quem pode dizer que você existe, não é um robô do facebook"></td>
+								<td>	<input type="text" name="tel_referencia2" placeholder="tel_referencia2" title="Um telefone que possamos entrar em contato com a pessoa"> </td>
+									
+								<td>	<input type="text" name="fb_referencia2" placeholder="fb_referencia2" title="Ou o perfil Facebook desta pessoa"></td>
+							</tr>
+
+							<tr>
+								<td>	<input type="text" name="mn_referencia3" placeholder="mn_referencia3" title="Nome de quem pode dizer que você existe, não é um robô do facebook"></td>
+								<td>	<input type="text" name="tel_referencia3" placeholder="tel_referencia3" title="Um telefone que possamos entrar em contato com a pessoa"> </td>
+									
+								<td>	<input type="text" name="fb_referencia3" placeholder="fb_referencia3" title="Ou o perfil Facebook desta pessoa"></td>
+							</tr>
+							</tbody>
+
+							</TABLE>
+						</div>
+					
+						<h5> Informe seu email corretamente. Para finnalizarmos o seu cadastro, você precisará confirmar seu email na próxima etapa.</h5>
+
+						<label for="id_email">e-mail</label><input type="email" name="email" placeholder="e-mail" title="Seu e-mail será usado para você poder transferir créditos e para o BTF se comunicar com vc.">
+
+						<label for="id_email2">e-mail</label><input type="email" name="email2" placeholder="e-mail2" title="digite outra vez o email para confirmar que está certo o que você digitou.">
+
+						<label for="id_senha">senha</label><input type="senha" name="senha" placeholder="senha" title="Digite uma senha de 6 caracteres para você poder fazer as transferências">
+					
+					<!--<textarea class="form-control" cols="40" id="id_email" maxlength="50" name="email" placeholder="e-mail" title="Seu e-mail será usado para você poder trasnferir créditos e para o BTF se comunicar com vc."></textarea> -->
+
+						{% buttons submit='Gravar' reset="Cancelar" %}{% endbuttons %}		
+					</div>
+
+		</form>				
+</div>
 {%	endblock	%}
+
+
+<!--	
+	<div class="container text-left">
+    	<h3 class="display-0 m-0">Cadastro de Talentos</h1>
+    	<p class="small">
+      		Antes de cadastrar seus talentos, leia as Dicas para cadastrar talentos e reveja as Leis que regem o BTF em "Como funciona"
+    	</p>
+  	</div>
+
+	<form	method="POST"	class="post-form">{%	csrf_token	%}
+		{% bootstrap_form form %}			
+
+		{% buttons submit='Gravar' reset="Cancelar" %}{% endbuttons %}		
+
+	</form>
+
+	<!-- form media -->
+<!--{{ form.media.js }}
+aqui tinha um ed block-->

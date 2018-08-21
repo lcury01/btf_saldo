@@ -1,0 +1,36 @@
+<!-- base.html -->
+
+{% extends 'btf_saldo/base.html' %}
+
+<!-- staticfiles -->
+{% load staticfiles %}
+
+<!-- block content -->
+{%	block	content	%}
+
+<!-- aqui static -->
+{% load static %}
+<!-- aqui bootstrap4 -->
+{% load bootstrap4 %}
+
+<!-- script autocomplete -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.js" type="text/javascript"></script>
+
+<!-- aqui form media -->
+	{{ form.media.css }}
+	
+	<div class="container text-left">
+    	<h3 class="display-0 m-0">Edição de Associados</h1>
+
+	<form	method="POST"	class="post-form">{%	csrf_token	%}
+		{% bootstrap_form form %}			
+
+		{% buttons submit='Confimar' %}{% endbuttons %}		
+
+	</form>
+	</div>
+	<!-- form media -->
+{{ form.media.js }}
+{% endblock %}
+
+	
