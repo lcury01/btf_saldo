@@ -117,7 +117,7 @@ def assoc_add(request):
 def talentos_filtro(request):
     talentos_list = Talento.objects.all()
     talentos_filter = TalentosFilter(request.GET, queryset=talentos_list)
-    return render(request, 'btf_saldo/talentos_filtro_new.html', {'filter': talentos_filter, 'operacao': True})
+    return render(request, 'btf_saldo/talentos_filtro.html', {'filter': talentos_filter, 'operacao': True})
     #return render(request, 'btf_saldo/talentos_filtro_new.html')
 
 def talentos_edit2(request, pk):
@@ -132,6 +132,15 @@ def talentos_edit2(request, pk):
         form = TalentoForm(instance=talento)
     return render(request, 'btf_saldo/talento_edit.html', {'form': form, 'operacao': True})    
 
+
+def talento_del(request, pk):
+    talento = get_object_or_404(Talento, pk=pk)
+    if request.method == "POST":
+            talento.delete()
+            return redirect('talentos_filtro')   
+    else:
+        form = TalentoForm(instance=talento)
+    return render(request, 'btf_saldo/talento_del.html', {'form': form, 'operacao': True})    
 
 
 def talentos_lista(request, cad):

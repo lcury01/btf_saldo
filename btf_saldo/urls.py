@@ -36,6 +36,7 @@ urlpatterns = [
     url(r'^talento/add/$',	views.talento_crud,	name='talento_crud'),
     url(r'^talento/(?P<pk>\d+)/$',	views.talento_detail,	name='talento_detail'),
     url(r'^talento/(?P<pk>\d+)/edit',  views.talento_edit,   name='talento_edit'),
+    url(r'^talento/(?P<pk>\d+)/del',  views.talento_del,   name='talento_del'),
     
 
     url(r'^geral/$', views.cadastro_list, name='geral'), 

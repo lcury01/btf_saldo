@@ -35,7 +35,6 @@ INSTALLED_APPS = [
     'dal',
     'dal_select2',
     'bootstrap4',
-    'django_select2',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
