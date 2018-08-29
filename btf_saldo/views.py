@@ -23,7 +23,35 @@ from .forms import AssocForm
 # a partir daqui
 
 def home(request):
-	return 	render(request, 'btf_saldo/inicio.html')
+	return 	render(request, 'btf_saldo/index.html')
+
+def index_funciona(request):
+    return  render(request, 'btf_saldo/index_funciona.html')
+
+def index_porque(request):
+    return  render(request, 'btf_saldo/index_porque.html')    
+
+def index_grupo(request):
+    return  render(request, 'btf_saldo/index_grupo.html')
+
+def index_ajudar(request):
+    return  render(request, 'btf_saldo/index_ajudar.html')
+
+def index_saiba(request):
+    return  render(request, 'btf_saldo/index_saiba.html')
+
+def index_eventos(request):
+    return  render(request, 'btf_saldo/index_eventos.html')
+
+def index_definir(request):
+    return  render(request, 'btf_saldo/index_definir.html')
+
+
+
+
+def assoc_home(request):
+    return  render(request, 'btf_saldo/inicio.html')
+
 
 def operacao(request):
     return  render(request, 'btf_saldo/inicio_operacao.html', {'operacao': True})
@@ -170,8 +198,10 @@ def geral(request):
     cadastros   =   Cadastro.objects.all()
     return  render(request, 'btf_saldo/geral.html',  {'cadastros':cadastros})    
 
+def precadastro(request):       
+    return  render(request, 'btf_saldo/precadastro.html')    
 
-def cadastro_crud(request):
+def precadastro_crud(request):
 	if request.method == "POST":
 		form = PreCadastroForm(request.POST)
 		if form.is_valid():

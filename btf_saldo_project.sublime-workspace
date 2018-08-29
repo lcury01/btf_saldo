@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"prec",
+				"precadastro"
+			],
+			[
 				"Mo",
 				"ModelSelect2"
 			],
@@ -148,19 +152,92 @@
 	"buffers":
 	[
 		{
-			"file": "btf_saldo/templates/btf_saldo/talento_crud.html",
+			"file": "btf_saldo/urls.py",
 			"settings":
 			{
-				"buffer_size": 434,
+				"buffer_size": 3065,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "btf_saldo/forms.py",
+			"file": "btf_saldo/views.py",
 			"settings":
 			{
-				"buffer_size": 761,
+				"buffer_size": 9444,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "btf_saldo/templates/btf_saldo/index_definir.html",
+			"settings":
+			{
+				"buffer_size": 656,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "btf_saldo/templates/btf_saldo/index_eventos.html",
+			"settings":
+			{
+				"buffer_size": 3553,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "btf_saldo/templates/btf_saldo/index_funciona.html",
+			"settings":
+			{
+				"buffer_size": 8618,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "btf_saldo/templates/btf_saldo/index_grupo.html",
+			"settings":
+			{
+				"buffer_size": 5303,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "btf_saldo/templates/btf_saldo/index_ajudar.html",
+			"settings":
+			{
+				"buffer_size": 6085,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "btf_saldo/templates/btf_saldo/index_porque.html",
+			"settings":
+			{
+				"buffer_size": 3290,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "btf_saldo/templates/btf_saldo/index_saiba.html",
+			"settings":
+			{
+				"buffer_size": 3447,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "btf_saldo/templates/btf_saldo/precadastro.html",
+			"settings":
+			{
+				"buffer_size": 1967,
+				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		}
@@ -181,7 +258,7 @@
 	},
 	"console":
 	{
-		"height": 0.0,
+		"height": 126.0,
 		"history":
 		[
 		]
@@ -205,13 +282,16 @@
 	],
 	"file_history":
 	[
+		"/home/luadm/djangogirls/btf_saldo/templates/btf_saldo/index.html",
+		"/home/luadm/djangogirls/btf_saldo/templates/btf_saldo/base_index.html",
+		"/home/luadm/djangogirls/btf_saldo/templates/btf_saldo/talento_crud.html",
+		"/home/luadm/djangogirls/btf_saldo/urls.py",
 		"/home/luadm/djangogirls/btf_env/lib/python3.4/site-packages/pip/_internal/__init__.py",
 		"/home/luadm/djangogirls/btf_env/lib/python3.4/site-packages/django/core/management/__init__.py",
 		"/home/luadm/djangogirls/myvenv/lib/python3.5/site-packages/pipenv/patched/notpip/__init__.py",
 		"/home/luadm/djangogirls/myvenv/lib/python3.5/site-packages/pipenv/vendor/pip9/__init__.py",
 		"/home/luadm/djangogirls/btf_saldo/models.py",
 		"/home/luadm/djangogirls/btf_saldo/forms.py",
-		"/home/luadm/djangogirls/btf_saldo/templates/btf_saldo/talento_crud.html",
 		"/home/luadm/djangogirls/btf_saldo/admin.py",
 		"/home/luadm/djangogirls/btf_saldo/forms_ant.py",
 		"/home/luadm/djangogirls/mysite/urls.py",
@@ -220,7 +300,6 @@
 		"/home/luadm/djangogirls/btf_saldo/templates/btf_saldo/talento_list.html",
 		"/home/luadm/djangogirls/btf_saldo/static/js/rango-jquery.js",
 		"/home/luadm/djangogirls/btf_saldo/templates/btf_saldo/base.html",
-		"/home/luadm/djangogirls/btf_saldo/urls.py",
 		"/home/luadm/djangogirls/mysite/settings.py",
 		"/home/luadm/djangogirls/btf_saldo/templates/btf_saldo/inicio.html",
 		"/home/luadm/djangogirls/btf_saldo/templates/btf_saldo/talento_detail.html",
@@ -293,6 +372,10 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"fase1",
+			"preca",
+			"cadastro",
+			"assoc_crud",
 			"select2",
 			"</td></tr>",
 			"<tr><td>",
@@ -324,24 +407,294 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 6,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "btf_saldo/templates/btf_saldo/talento_crud.html",
+					"file": "btf_saldo/urls.py",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 434,
+						"buffer_size": 3065,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								402,
-								402
+								648,
+								648
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 8,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "btf_saldo/views.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 9444,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1238,
+								1238
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 217.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "btf_saldo/templates/btf_saldo/index_definir.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 656,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								603,
+								603
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "btf_saldo/templates/btf_saldo/index_eventos.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3553,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3553,
+								3553
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "btf_saldo/templates/btf_saldo/index_funciona.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 8618,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								8618,
+								8618
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1458.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "btf_saldo/templates/btf_saldo/index_grupo.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5303,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4646,
+								4646
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1027.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "btf_saldo/templates/btf_saldo/index_ajudar.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 6085,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								132,
+								132
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 105.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "btf_saldo/templates/btf_saldo/index_porque.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3290,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3126,
+								3126
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 315.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "btf_saldo/templates/btf_saldo/index_saiba.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3447,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3266,
+								3266
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 621.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "btf_saldo/templates/btf_saldo/precadastro.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1967,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1959,
+								1959
 							]
 						],
 						"settings":
@@ -352,35 +705,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "btf_saldo/forms.py",
-					"semi_transient": true,
-					"settings":
-					{
-						"buffer_size": 761,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								761,
-								761
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Python/Python.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
+					"stack_index": 9,
 					"type": "text"
 				}
 			]
@@ -459,7 +784,7 @@
 	"settings":
 	{
 	},
-	"show_minimap": true,
+	"show_minimap": false,
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,

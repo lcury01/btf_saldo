@@ -1,0 +1,102 @@
+{% extends 'btf_saldo/base_index.html' %}
+
+<!-- staticfiles -->
+{% load staticfiles %}
+
+<!-- block content -->
+{%  block content %}
+
+<!-- aqui static -->
+{% load static %}
+<!-- aqui bootstrap4 -->
+{% load bootstrap4 %}
+
+    <!-- Page Content -->
+    <div class="container">
+
+      <!-- Jumbotron Header -->
+      <header class="jumbotron my-4">
+        <h3 class="display-3">Semeando</h1>
+        <p class="lead">Como você pode ajudar o Banco de Tempo acontecer</p>
+        <p class="text-secondary"><small>
+           
+
+Para que a semente do Banco de Tempo floresça, cada associado colabora quando faz uma troca dentro dos conceitos que o BTF tenta promover. Se estas trocas trazem reflexões para a nossa vida e a gente começa a mudar e o BTF está cumprindo o seu propósito.
+Mas, é necessário a gente fazer mais para que esta semente se espalhe...
+Entenda que, a sua colaboração é sempre necessária e ter uma atitude transformadora é o que faz a diferença. Se você acha que o grupo não está bom, antes de reclamar ou desistir, pense sobre o que você poderia fazer para que o grupo fosse melhor. Tem gente oferecendo serviços por dinheiro ? Se pergunte: “dediquei meu tempo a verificar se esta pessoa já está associada ao BTF e, caso estiver, eu avisei a moderação do grupo a esse respeito ou apenas discuti com a pessoa nas mensagens privadas?Se a pessoa não é associada ao grupo, eu contei para ela que o grupo não é um grupo de classificados e que o Banco de Tempo se propõem a romper com os paradigmas vigentes ? Pelo menos, marquei a pessoa numa das publicações que explicam o Banco ou fiquei só discutindo inbox com ela?” Já sabemos que esperar que um grupo pequeno resolva o que eu mesmo posso fazer não adianta muito, né ? É só prestar atenção nesse mundo de até então.
+É, o grupo é o que cada associado faz por ele.
+Você também pode ajudar de muitas outras formas, dedicando seu tempo, com compromisso ao Banco de Tempo.
+A gente precisa de gente que dedique tempo a verificar se as postagens e os comentários estão dentro dos conceitos do Banco de Tempo, porque, nessa época tão pautada no consumo, superficialidade e imediatismo, TODOS se tornam vitimas disso e acabam agindo por imitação - um comentário com uma propaganda faz os outros membros entenderem que propagandas são permitidas.
+A gente precisa de pessoas que dediquem tempo a fazer as transferências de créditos e outras pessoas que cadastrem os novos associados nas planilhas. Você já pensou em ajudar nisso ?
+A gente precisa de pessoas que conversem com os novos associados e expliquem o que o Banco é e como é como eles podem contribuir com seus talentos.
+O Banco precisa de gente que saiba fazer vídeos, que saiba fazer animações, que construa roteiros, que manje de mídias sociais, que possa fazer imagens que comuniquem os conceitos da troca. A gente precisa muito disso!
+O Banco precisa programadores de computadores que possam ajudar a desenvolver um aplicativo novo (já está em desenvolvimento) que facilite que os talentos estejam disponíveis em qualquer dispositivo e que os saldos possam ser vistos a qualquer momento. - como o BTF está crescendo muito, esse é o único aspecto que exige talentos bem específicos, nesse momento. Logo, a gente pode montar um jeito que qualquer um também possa contribuir também.
+Tudo, na vida, isso exige tempo e compromisso e aqui, não seria diferente. Se quiser ajudar, com o mínimo que for, entre em contato com a gente, pela nossa página, ou procure um dos administradores do grupo.
+Para saber como montar um Banco de Tempo na sua cidade, entre em contato com a Geovana Madeira Narcizo </small></p>
+        <a href="{% url 'index_definir' %}" class="btn btn-primary btn-lg">Junte-se!</a>
+      </header>
+
+
+      <!-- Page Features -->
+      <div class="row text-center">
+
+        <div class="col-lg-3 col-md-6 mb-4">
+          <div class="card">
+            {% load static %}
+            <img class="card-img-top" src={% static "btf_saldo/h_definir.jpg" %} alt="">
+            <div class="card-body">
+              <h4 class="card-title">Florescer</h4>
+              <p class="card-text">Trazer talentos, espalhar a filosofia, fazer valer o propósito.</p>
+            </div>
+            <div class="card-footer">
+              <a href="{% url 'index_definir' %}" class="btn btn-primary">É com você</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 mb-4">
+          <div class="card">
+            <img class="card-img-top" src={% static "btf_saldo/h_definir.jpg" %}  alt="">
+            <div class="card-body">
+              <h4 class="card-title">Compromisso</h4>
+              <p class="card-text">Não faça vista grossa aos problemas, mude e transforme!</p>
+            </div>
+            <div class="card-footer">
+              <a href="{% url 'index_definir' %}" class="btn btn-primary">Adm do BTF</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 mb-4">
+          <div class="card">
+            <img class="card-img-top" src={% static "btf_saldo/h_definir.jpg" %}  alt="">
+            <div class="card-body">
+              <h4 class="card-title">Como ajudar</h4>
+              <p class="card-text">Precisamos de talentos especificos para manter a iniciativa</p>
+            </div>
+            <div class="card-footer">
+              <a href="{% url 'index_definir' %}" class="btn btn-primary">Além das trocas</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 mb-4">
+          <div class="card">
+            <img class="card-img-top" src={% static "btf_saldo/h_definir.jpg" %}  alt="">
+            <div class="card-body">
+              <h4 class="card-title">Pelo mundo</h4>
+              <p class="card-text">Quer um BT no seu caminho?</p>
+            </div>
+            <div class="card-footer">
+              <a href="{% url 'index_definir' %}" class="btn btn-primary">Semeando a ideia</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <!-- /.row -->
+
+    </div>
+    <!-- /.container -->
+
+{% endblock %}

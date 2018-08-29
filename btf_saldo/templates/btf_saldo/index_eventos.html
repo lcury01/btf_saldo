@@ -1,0 +1,93 @@
+{% extends 'btf_saldo/base_index.html' %}
+
+<!-- staticfiles -->
+{% load staticfiles %}
+
+<!-- block content -->
+{%  block content %}
+
+<!-- aqui static -->
+{% load static %}
+<!-- aqui bootstrap4 -->
+{% load bootstrap4 %}
+    <!-- Page Content -->
+    <div class="container">
+
+      <!-- Jumbotron Header -->
+      <header class="jumbotron my-4">
+        <h1 class="display-5">Eventos em Grupo</h1>
+        <p class="lead">Aqui, o importante é aquilo que a gente faz para viver!
+        Como a gente ganha dinheiro é outra história.</p>
+        <div class="text-secondary">
+          <p> Gostaria de compartilhar algum conhecimento seu com o grupo? Vamos organizar um evento para isso!</p>
+          <p> Tem um espaço na sua casa e você receber eventos do BTF? </p>
+          <p> Oferece alguma atividade regular a associados do BTF?</p>
+          <p> Tem alguma ideia e gostaria de compartilhar ? </p>
+          </div>
+        <a href="{% url 'precadastro' %}" class="btn btn-primary btn-lg">Se associe ao BTF!</a>
+      </header>
+
+
+      <!-- Page Features -->
+      <div class="row text-center">
+
+        <div class="col-lg-3 col-md-6 mb-4">
+          <div class="card">
+            {% load static %}
+            <img class="card-img-top" src={% static "btf_saldo/h_definir.jpg" %} alt="">
+            <div class="card-body">
+              <h4 class="card-title">Eventos que já aconteceram</h4>
+              <p class="card-text">Ah, já teve coisa bem bacana que aconteceu no BTF...</p>
+            </div>
+            <div class="card-footer">
+              <a href="{% url 'index_definir' %}" class="btn btn-primary">Dá uma espiada</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 mb-4">
+          <div class="card">
+            <img class="card-img-top" src={% static "btf_saldo/h_definir.jpg" %}  alt="">
+            <div class="card-body">
+              <h4 class="card-title">Atividades Regulares</h4>
+              <p class="card-text">Aulas de idiomas, grupos de canto, exercicios físicos. Vem participar também!</p>
+            </div>
+            <div class="card-footer">
+              <a href="{% url 'index_definir' %}"  class="btn btn-primary">Agenda</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 mb-4">
+          <div class="card">
+            <img class="card-img-top" src={% static "btf_saldo/h_definir.jpg" %}  alt="">
+            <div class="card-body">
+              <h4 class="card-title">Espaços</h4>
+              <p class="card-text">A gente troca, sempre! Tem gente que tem espaço para receber talentos, tem gente com talentos esperando o espaço para distribuir.</p>
+            </div>
+            <div class="card-footer">
+              <a href="{% url 'index_definir' %}" class="btn btn-primary">Parceiros BTF</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 mb-4">
+          <div class="card">
+            <img class="card-img-top" src={% static "btf_saldo/h_definir.jpg" %}  alt="">
+            <div class="card-body">
+              <h4 class="card-title">Guia</h4>
+              <p class="card-text">Quer organizar um evento para o BTF ou disponibilizar vagas nos seus eventos? Fale com a gente.</p>
+            </div>
+            <div class="card-footer">
+              <a href="{% url 'index_definir' %}" class="btn btn-primary">Entenda tudo</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <!-- /.row -->
+
+    </div>
+    <!-- /.container -->
+
+{% endblock %}

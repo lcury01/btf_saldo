@@ -1,0 +1,95 @@
+{% extends 'btf_saldo/base_index.html' %}
+
+<!-- staticfiles -->
+{% load staticfiles %}
+
+<!-- block content -->
+{%  block content %}
+
+<!-- aqui static -->
+{% load static %}
+<!-- aqui bootstrap4 -->
+{% load bootstrap4 %}
+    <!-- Page Content -->
+    <div class="container">
+
+      <!-- Jumbotron Header -->
+      <header class="jumbotron my-4">
+        <h3 class="display-3">O Grupo</h1>
+        <p class="lead">Somos um grupo bem organizado, não uma organização com uma equipe de administradores fazendo tudo acontecer.</p>
+        <p class="text-secondary"><small>
+           
+
+Cada pessoa que participa do Banco tem um papel e precisa cumprir seu papel para tudo funcionar adequadamente. Quem define esse papel é o talento que a gente deseja trocar e a posição que a gente tem nas trocas.
+As regras existem para colocar todo mundo dentro do mesmo ambiente, dentro da mesma casa. Não, não tem como a administração do Banco saber se uma pessoa está trocando uma coisa e registrando outra nas planilhas, mas cada pessoa envolvida na troca sabe se isto está dentro da ética estabelecida pelo grupo. E, não é porque não aceitamos o momento atual que vamos tentar transformá-lo sem nenhuma organização. Um grupo dentro do mesmo propósito consegue ir longe, né ?
+Cada pessoa assume o papel que pode, umas das regras do BTF é essa: cada um troca o que pode e quando pode. Por isso, alguns estão no BTF apenas para trocar produtos e serviços, outros já se engajam e espalham a semente do Banco por ai, acolhem os novos associados. Outros, dedicam tempo para facilitar o funcionamento do grupo, moderando as publicações, registrando as transferências. Tem gente ajudando os projetos sociais se estenderem na comunidade. Agora, tem gente ajudando o ambiente virtual ser mais agradável e as ferramentas que apóiam a existência do BTF serem melhores. Cada um contribui como pode.
+Mas é papel de todo mundo entender como tudo funciona aqui e fazer o possível para que a comunicação no grupo flua e seja clara. Leia as regras, seja pró-ativo nas trocas, confirme todas as informações nas trocas. Se comunique! Se algum imprevisto acontecer, não deixe de avisar. Se tem dúvidas, pergunte. Ajude quem não está entendendo alguma coisa. E, se você perceber que algo está fora dos conceitos do BTF, converse e explique ao outro associado. Se for o caso, comunique a moderação.
+Valorize o seu tempo e o do outro! Só se candidate ou manifeste interesse nas trocas que você vai conseguir efetuar. Ajude o grupo a ter uma dinâmica abundante, não traga o comportamento de que tudo vai faltar para o grupo. Quando você puder se dedicar a algo, isso, naturalmente vai aparecer aqui, então confia. Não é porque vc viu uma postagem que precisa gritar EU QUERO sem pensar :)
+O BTF é cada troca, cada mensagem trocada, cada relação estabelecida. Não é o grupo que molda a gente, é a gente dentro do grupo que faz ele ser do jeito que a gente acha que o BTF deve ser. </small></p>
+        <a href="#" class="btn btn-primary btn-lg">Junte-se!</a>
+      </header>
+
+
+      <!-- Page Features -->
+      <div class="row text-center">
+
+        <div class="col-lg-3 col-md-6 mb-4">
+          <div class="card">
+            {% load static %}
+            <img class="card-img-top" src={% static "btf_saldo/h_definir.jpg" %} alt="">
+            <div class="card-body">
+              <h4 class="card-title">Sua Parte</h4>
+              <p class="card-text">Como é que você faz o Banco de tempo funcionar</p>
+            </div>
+            <div class="card-footer">
+              <a href="{% url 'index_definir' %}" class="btn btn-primary">Entenda melhor</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 mb-4">
+          <div class="card">
+            <img class="card-img-top" src={% static "btf_saldo/h_definir.jpg" %}  alt="">
+            <div class="card-body">
+              <h4 class="card-title">Não tá fluindo? </h4>
+              <p class="card-text">Resignificar a nossa relação com o consumo.</p>
+            </div>
+            <div class="card-footer">
+              <a href="#" class="btn btn-primary">Não existe dinheiro</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 mb-4">
+          <div class="card">
+            <img class="card-img-top" src={% static "btf_saldo/h_definir.jpg" %}  alt="">
+            <div class="card-body">
+              <h4 class="card-title">E a adm?</h4>
+              <p class="card-text">É, pois é, não tem ninguém ajudando.</p>
+            </div>
+            <div class="card-footer">
+              <a href="#" class="btn btn-primary">Deu o seu melhor?</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 mb-4">
+          <div class="card">
+            <img class="card-img-top" src={% static "btf_saldo/h_definir.jpg" %}  alt="">
+            <div class="card-body">
+              <h4 class="card-title">Empatia</h4>
+              <p class="card-text">Nas redes sociais alcançamos todo mundo.</p>
+            </div>
+            <div class="card-footer">
+              <a href="#" class="btn btn-primary">Não somos um clubinho</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <!-- /.row -->
+
+    </div>
+    <!-- /.container -->
+
+{% endblock %}

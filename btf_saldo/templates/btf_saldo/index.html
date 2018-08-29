@@ -1,0 +1,89 @@
+{% extends 'btf_saldo/base_index.html' %}
+
+<!-- staticfiles -->
+{% load staticfiles %}
+
+<!-- block content -->
+{%  block content %}
+
+<!-- aqui static -->
+{% load static %}
+<!-- aqui bootstrap4 -->
+{% load bootstrap4 %}
+
+    <!-- Page Content -->
+    <div class="container">
+
+      <!-- Jumbotron Header -->
+      <header class="jumbotron my-4">
+        <h1 class="display-5">Banco de Tempo de Floripa</h1>
+        <p class="lead">Aqui, o importante é aquilo que a gente faz para viver!
+        Como a gente ganha dinheiro é outra história.</p>
+        <p class="text-secondary"><small>
+          A gente se forma por tudo aquilo a que dedicamos nosso tempo. E é esse desenvolvimento que nos capacita a viver em comunidade. Poder receitar os remédios de última geração que aliviam o resfriado é tão valioso quanto conhecer as ervas do nosso quintal que trazem esse alívio há tanto tempo. Esses conhecimentos valem tanto quanto a habilidade de alguém que arruma a janela que impede que o vento nos deixe tão resfriados durante o inverno, né não ? </small></p>
+        <a href="{% url 'precadastro' %}" class="btn btn-primary btn-lg">Junte-se!</a>
+      </header>
+
+
+      <!-- Page Features -->
+      <div class="row text-center">
+
+        <div class="col-lg-3 col-md-6 mb-4">
+          <div class="card">
+            <img class="card-img-top" src={% static "btf_saldo/h_funciona.jpg" %} alt="">
+            <div class="card-body">
+              <h4 class="card-title">Como funciona?</h4>
+              <p class="card-text">O tempo que usamos para nos dedicar oferecendo um talento a uma outra pessoa do grupo é o fator de troca.</p>
+            </div>
+            <div class="card-footer">
+              <a href="{% url 'index_funciona' %}" class="btn btn-primary">Entenda melhor</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 mb-4">
+          <div class="card">
+            <img class="card-img-top" src={% static "btf_saldo/h_porque.jpg" %}  alt="">
+            <div class="card-body">
+              <h4 class="card-title">Por que ?</h4>
+              <p class="card-text">Porque somos iguais. As necessidades, as escolhas... só acontecem em tempos diferentes.</p>
+            </div>
+            <div class="card-footer">
+              <a href="{% url 'index_porque' %}"  class="btn btn-primary">Como assim?</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 mb-4">
+          <div class="card">
+            <img class="card-img-top" src={% static "btf_saldo/h_grupo.jpg" %}  alt="">
+            <div class="card-body">
+              <h4 class="card-title">O grupo</h4>
+              <p class="card-text">A gente troca experiência, colabora com a comunidade e nesse movimento, prosperamos.</p>
+            </div>
+            <div class="card-footer">
+              <a href="{% url 'index_grupo' %}" class="btn btn-primary">Quem e Como?</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 mb-4">
+          <div class="card">
+            <img class="card-img-top" src={% static "btf_saldo/h_ajudar.jpg" %}  alt="">
+            <div class="card-body">
+              <h4 class="card-title">Como ajudar</h4>
+              <p class="card-text">As trocas movem, mas que tal ir um pouco além e contribuir para que a iniciativa se espalhe por ai.</p>
+            </div>
+            <div class="card-footer">
+              <a href="{% url 'index_ajudar' %}" class="btn btn-primary">Semeando a ideia</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <!-- /.row -->
+
+    </div>
+    <!-- /.container -->
+
+{% endblock %}
