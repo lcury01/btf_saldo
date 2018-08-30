@@ -16,6 +16,8 @@ urlpatterns = [
     url(r'^index_porque', views.index_porque, name='index_porque'),
     url(r'^index_eventos', views.index_eventos, name='index_eventos'),
     url(r'^index_definir', views.index_definir, name='index_definir'),
+    url(r'^index_trocamos', views.index_trocamos, name='index_trocamos'),
+    url(r'^index_florescer', views.index_florescer, name='index_florescer'),
 
 
 #operacao

@@ -1,0 +1,44 @@
+{% extends 'btf_saldo/base_index.html' %}
+
+<!-- staticfiles -->
+{% load staticfiles %}
+
+<!-- block content -->
+{%  block content %}
+
+<!-- aqui static -->
+{% load static %}
+<!-- aqui bootstrap4 -->
+{% load bootstrap4 %}
+
+    <!-- Page Content -->
+    <div class="container">
+
+      <!-- Jumbotron Header -->
+      <header class="jumbotron my-4">
+        <h3 class="display-3">Como Trocamos</h1>
+        <p class="lead">Num Banco de Tempo, você usa o talento do outro para poder ganhar tempo.</p>
+        <p class="text-secondary">
+        Tem gente com maior facilidade para fazer coisas que não damos conta, ou ainda não sabemos. É ai que um Banco de Tempo ajuda a gente a ganhar tempo para a gente viver!</p> 
+
+        <a href="#" class="btn btn-primary btn-lg">Junte-se!</a>
+      </header>
+
+
+      <!-- Page Features -->
+      <div class="row text-center">
+
+        <div class="col-lg-8 col-md-6 mb-4">
+              
+            <img class="card-img-top" src={% static "btf_saldo/p_funciona.jpg" %} alt="">            
+          
+        </div>
+
+        
+      </div>
+      <!-- /.row -->
+
+    </div>
+    <!-- /.container -->
+
+{% endblock %}

@@ -155,7 +155,7 @@
 			"file": "btf_saldo/urls.py",
 			"settings":
 			{
-				"buffer_size": 3065,
+				"buffer_size": 3216,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -164,52 +164,16 @@
 			"file": "btf_saldo/views.py",
 			"settings":
 			{
-				"buffer_size": 9444,
+				"buffer_size": 9626,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "btf_saldo/templates/btf_saldo/index_definir.html",
+			"file": "btf_saldo/templates/btf_saldo/index_trocamos.html",
 			"settings":
 			{
-				"buffer_size": 656,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "btf_saldo/templates/btf_saldo/index_eventos.html",
-			"settings":
-			{
-				"buffer_size": 3553,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "btf_saldo/templates/btf_saldo/index_funciona.html",
-			"settings":
-			{
-				"buffer_size": 8618,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "btf_saldo/templates/btf_saldo/index_grupo.html",
-			"settings":
-			{
-				"buffer_size": 5303,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "btf_saldo/templates/btf_saldo/index_ajudar.html",
-			"settings":
-			{
-				"buffer_size": 6085,
+				"buffer_size": 1145,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -218,25 +182,43 @@
 			"file": "btf_saldo/templates/btf_saldo/index_porque.html",
 			"settings":
 			{
-				"buffer_size": 3290,
+				"buffer_size": 3294,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "btf_saldo/templates/btf_saldo/index_saiba.html",
+			"file": "btf_saldo/templates/btf_saldo/index_ajudar.html",
 			"settings":
 			{
-				"buffer_size": 3447,
+				"buffer_size": 6087,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "btf_saldo/templates/btf_saldo/precadastro.html",
+			"file": "btf_saldo/templates/btf_saldo/index_florescer.html",
 			"settings":
 			{
-				"buffer_size": 1967,
+				"buffer_size": 1863,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "btf_saldo/templates/btf_saldo/index_funciona.html",
+			"settings":
+			{
+				"buffer_size": 3812,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "btf_saldo/templates/btf_saldo/index.html",
+			"settings":
+			{
+				"buffer_size": 3646,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -275,13 +257,20 @@
 	"expanded_folders":
 	[
 		"/home/luadm/djangogirls/btf_saldo",
-		"/home/luadm/djangogirls/btf_saldo/static",
 		"/home/luadm/djangogirls/btf_saldo/templates",
 		"/home/luadm/djangogirls/btf_saldo/templates/btf_saldo",
 		"/home/luadm/djangogirls/mysite"
 	],
 	"file_history":
 	[
+		"/home/luadm/djangogirls/btf_saldo/templates/btf_saldo/precadastro.html",
+		"/home/luadm/djangogirls/btf_saldo/templates/btf_saldo/index_saiba.html",
+		"/home/luadm/djangogirls/btf_saldo/templates/btf_saldo/index_porque.html",
+		"/home/luadm/djangogirls/btf_saldo/templates/btf_saldo/index_grupo.html",
+		"/home/luadm/djangogirls/btf_saldo/templates/btf_saldo/index_funciona.html",
+		"/home/luadm/djangogirls/btf_saldo/templates/btf_saldo/index_eventos.html",
+		"/home/luadm/djangogirls/btf_saldo/templates/btf_saldo/index_definir.html",
+		"/home/luadm/djangogirls/btf_saldo/templates/btf_saldo/index_ajudar.html",
 		"/home/luadm/djangogirls/btf_saldo/templates/btf_saldo/index.html",
 		"/home/luadm/djangogirls/btf_saldo/templates/btf_saldo/base_index.html",
 		"/home/luadm/djangogirls/btf_saldo/templates/btf_saldo/talento_crud.html",
@@ -407,7 +396,7 @@
 	"groups":
 	[
 		{
-			"selected": 6,
+			"selected": 5,
 			"sheets":
 			[
 				{
@@ -416,15 +405,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 3065,
+						"buffer_size": 3216,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								648,
-								648
+								752,
+								752
 							]
 						],
 						"settings":
@@ -437,7 +426,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 8,
+					"stack_index": 1,
 					"type": "text"
 				},
 				{
@@ -446,15 +435,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 9444,
+						"buffer_size": 9626,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1238,
-								1238
+								1422,
+								1422
 							]
 						],
 						"settings":
@@ -467,24 +456,24 @@
 						"translation.y": 217.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 7,
+					"stack_index": 2,
 					"type": "text"
 				},
 				{
 					"buffer": 2,
-					"file": "btf_saldo/templates/btf_saldo/index_definir.html",
+					"file": "btf_saldo/templates/btf_saldo/index_trocamos.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 656,
+						"buffer_size": 1145,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								603,
-								603
+								1033,
+								1033
 							]
 						],
 						"settings":
@@ -494,27 +483,27 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 45.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 6,
+					"stack_index": 5,
 					"type": "text"
 				},
 				{
 					"buffer": 3,
-					"file": "btf_saldo/templates/btf_saldo/index_eventos.html",
+					"file": "btf_saldo/templates/btf_saldo/index_porque.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 3553,
+						"buffer_size": 3294,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								3553,
-								3553
+								618,
+								618
 							]
 						],
 						"settings":
@@ -524,7 +513,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 180.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 4,
@@ -532,79 +521,19 @@
 				},
 				{
 					"buffer": 4,
-					"file": "btf_saldo/templates/btf_saldo/index_funciona.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 8618,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								8618,
-								8618
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 1458.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "btf_saldo/templates/btf_saldo/index_grupo.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 5303,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								4646,
-								4646
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 1027.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 6,
 					"file": "btf_saldo/templates/btf_saldo/index_ajudar.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 6085,
+						"buffer_size": 6087,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								132,
-								132
+								4278,
+								4278
 							]
 						],
 						"settings":
@@ -614,57 +543,27 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 105.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 7,
-					"file": "btf_saldo/templates/btf_saldo/index_porque.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 3290,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								3126,
-								3126
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 315.0,
+						"translation.y": 247.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 3,
 					"type": "text"
 				},
 				{
-					"buffer": 8,
-					"file": "btf_saldo/templates/btf_saldo/index_saiba.html",
+					"buffer": 5,
+					"file": "btf_saldo/templates/btf_saldo/index_florescer.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 3447,
+						"buffer_size": 1863,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								3266,
-								3266
+								1692,
+								1692
 							]
 						],
 						"settings":
@@ -674,38 +573,70 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 621.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 5,
+					"stack_index": 0,
 					"type": "text"
 				},
 				{
-					"buffer": 9,
-					"file": "btf_saldo/templates/btf_saldo/precadastro.html",
+					"buffer": 6,
+					"file": "btf_saldo/templates/btf_saldo/index_funciona.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1967,
+						"buffer_size": 3812,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1959,
-								1959
+								1984,
+								1984
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/HTML/HTML.sublime-syntax"
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 450.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "btf_saldo/templates/btf_saldo/index.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3646,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								273,
+								273
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 9,
+					"stack_index": 7,
 					"type": "text"
 				}
 			]

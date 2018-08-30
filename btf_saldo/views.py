@@ -46,7 +46,11 @@ def index_eventos(request):
 def index_definir(request):
     return  render(request, 'btf_saldo/index_definir.html')
 
+def index_trocamos(request):
+    return  render(request, 'btf_saldo/index_trocamos.html')
 
+def index_florescer(request):
+    return  render(request, 'btf_saldo/index_florescer.html')
 
 
 def assoc_home(request):
