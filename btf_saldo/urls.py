@@ -7,6 +7,10 @@ from btf_saldo.views import NomeAutocomplete
 
 
 urlpatterns = [
+#temp 
+    url(r'^bpw', views.bpw, name='bpw'),
+    url(r'^rede', views.rede, name='rede'),
+
 #home    
     url(r'^$', views.home, name='home'),
     url(r'^index_saiba', views.index_saiba, name='index_saiba'),
@@ -18,6 +22,7 @@ urlpatterns = [
     url(r'^index_definir', views.index_definir, name='index_definir'),
     url(r'^index_trocamos', views.index_trocamos, name='index_trocamos'),
     url(r'^index_florescer', views.index_florescer, name='index_florescer'),
+    url(r'^index_historia', views.index_historia, name='index_historia'),
 
 
 #operacao

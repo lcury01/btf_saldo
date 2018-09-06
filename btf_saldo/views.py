@@ -25,6 +25,12 @@ from .forms import AssocForm
 def home(request):
 	return 	render(request, 'btf_saldo/index.html')
 
+def bpw(request):
+    return  render(request, 'btf_saldo/indexbpw.html')
+
+def rede(request):
+    return  render(request, 'btf_saldo/rede.html')
+
 def index_funciona(request):
     return  render(request, 'btf_saldo/index_funciona.html')
 
@@ -52,6 +58,8 @@ def index_trocamos(request):
 def index_florescer(request):
     return  render(request, 'btf_saldo/index_florescer.html')
 
+def index_historia(request):
+    return  render(request, 'btf_saldo/post.html')
 
 def assoc_home(request):
     return  render(request, 'btf_saldo/inicio.html')
